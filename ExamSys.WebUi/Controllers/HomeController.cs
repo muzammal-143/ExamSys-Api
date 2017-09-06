@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExamSys.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,8 +9,10 @@ namespace ExamSys.WebUi.Controllers
 {
     public class HomeController : Controller
     {
+        ExamDB db = new ExamDB();
         public ActionResult Index()
         {
+            var s = db.Comment.ToList();
             ViewBag.Title = "Home Page";
 
             return View();

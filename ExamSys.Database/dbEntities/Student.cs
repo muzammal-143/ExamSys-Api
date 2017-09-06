@@ -14,9 +14,9 @@ namespace ExamSys.Database.dbEntities
         
         [Key]
         public int          id { get; set; }
-        [Index(IsUnique = true)]
+        //[Index(IsUnique = true)]
         public string       Roll_No         { get; set; }
-        [Index(IsUnique = true)]
+        //[Index(IsUnique = true)]
         public string RegistrationNo { get; set; }
         public string       Session         { get; set; }
         public int          Semester        { get; set; }

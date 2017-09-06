@@ -12,7 +12,7 @@ namespace ExamSys.Database.dbEntities
     {
         public int id { get; set; }
 
-        [Index(IsUnique = true)]
+        //[Index(IsUnique = true)]
         public string Timing { get; set; }
 
         public User created_by { get; set; }

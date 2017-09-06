@@ -16,7 +16,6 @@ namespace ExamSys.Database.dbEntities
         public string Title { get; set; }
 
 
-        public User created_by { get; set; }
         // Timestamp
         [Display(Name = "Created at")]
         [Required(ErrorMessage="Created at DateTime is required.")]

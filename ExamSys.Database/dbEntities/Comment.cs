@@ -10,11 +10,13 @@ namespace ExamSys.Database.dbEntities
 {
     public class Comment_Type 
     {
+        [Key]
         public int id { get; set; }
-        [Index(IsUnique = true)]
+
+        //[Index(IsUnique = true)]
         [Display(Name = "Type")]
         [Required(ErrorMessage = "Type is required")]
-        public string type { get; set; }
+        public string Type { get; set; }
 
         // Timestamp
         [Display(Name = "Created at")]
@@ -41,7 +43,7 @@ namespace ExamSys.Database.dbEntities
         [Display(Name = "Assign to")]
         public int? Assign_to { get; set; }
         [Display(Name = "Parent")]
-        public int? Parent { get; set; }
+        public int? TargetId { get; set; }
         [Display(Name = "Comment Type")]
         public Comment_Type CommentType { get; set; }
         [Display(Name = "Active")]

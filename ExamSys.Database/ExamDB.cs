@@ -16,7 +16,7 @@ namespace ExamSys.Database
         public DbSet<Degree>                    Degrees                 { get; set; }
         public DbSet<Department>                Department              { get; set; }
         public DbSet<Designation>               Designation             { get; set; }
-        public DbSet<Grade>                     Grade                   { get; set; }
+        public DbSet<Grades>                     Grade                   { get; set; }
         public DbSet<History>                   History                 { get; set; }
         public DbSet<Result_Type>               Result_Type             { get; set; }
         public DbSet<Semester_Details_Result>   Semester_Details_Result { get; set; }

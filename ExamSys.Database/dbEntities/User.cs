@@ -13,7 +13,7 @@ namespace ExamSys.Database.dbEntities
 
         [Key]
         public int id { get; set; }
-        [Index(IsUnique = true)]
+        //[Index(IsUnique = true)]
         public string UserName { get; set; }
         public string Password { get; set; }
 

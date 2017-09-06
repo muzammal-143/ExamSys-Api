@@ -12,7 +12,7 @@ namespace ExamSys.Database.dbEntities
     {
         public int id { get; set; }
 
-        [Index(IsUnique = true)]
+        //[Index("Short Name", Order = 1, IsUnique = true)]
         public string   ShortName       { get; set; }
         public string   FullName        { get; set; }
         public int      TotalSemesters  { get; set; }
@@ -43,3 +43,4 @@ namespace ExamSys.Database.dbEntities
 
 
 }
+
