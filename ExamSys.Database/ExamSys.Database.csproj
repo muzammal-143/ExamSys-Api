@@ -89,11 +89,15 @@
     <Compile Include="dbEntities\DayTiming.cs" />
     <Compile Include="dbEntities\Degree.cs" />
     <Compile Include="dbEntities\Department.cs" />
-    <Compile Include="dbEntities\Designation.cs" />
+    <Compile Include="dbEntities\Invoice.cs" />
+    <Compile Include="dbEntities\Permission.cs" />
+    <Compile Include="dbEntities\Properties.cs" />
+    <Compile Include="dbEntities\Role.cs" />
     <Compile Include="dbEntities\ExamSettings.cs" />
     <Compile Include="dbEntities\Grades.cs" />
     <Compile Include="dbEntities\History.cs" />
     <Compile Include="dbEntities\Result_Type.cs" />
+    <Compile Include="dbEntities\RolePermission.cs" />
     <Compile Include="dbEntities\Semester_Details_Result.cs" />
     <Compile Include="dbEntities\Semester_Result.cs" />
     <Compile Include="dbEntities\Session_Course.cs" />

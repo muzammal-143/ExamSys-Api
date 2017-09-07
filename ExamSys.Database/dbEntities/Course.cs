@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ExamSys.Database.dbEntities
 {
-    public class Course
+    public class Course : Properties
     {
         public int      id          { get; set; }
 
@@ -17,20 +17,10 @@ namespace ExamSys.Database.dbEntities
         public int      CH          { get; set; }
         public string   Name        { get; set; }
 
-        public User created_by { get; set; }
-        // Timestamp
-        [Display(Name = "Created at")]
-        [Required(ErrorMessage="Created at DateTime is required.")]
-        public DateTime created_at{ get; set; }
-
-        [Display(Name = "Edited at")]
-        [Required(ErrorMessage = "Edited at DateTime is required.")]
-        public DateTime edited_at { get; set; }
+        
 
         public Course()
         {
-            created_at = DateTime.Now;
-            edited_at = DateTime.Now;
         }
     }
 }

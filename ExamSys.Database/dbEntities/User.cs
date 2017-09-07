@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ExamSys.Database.dbEntities
 {
-    public class User
+    public class User : Properties
     {
 
         [Key]
@@ -16,9 +16,7 @@ namespace ExamSys.Database.dbEntities
         //[Index(IsUnique = true)]
         public string UserName { get; set; }
         public string Password { get; set; }
-
-        public Designation Designation { get; set; }
-
+        public Role Role { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Gender { get; set; }
@@ -26,20 +24,10 @@ namespace ExamSys.Database.dbEntities
         public string Email { get; set; }
         public bool   Active { get; set; }
 
-        // Timestamp
-        [Display(Name = "Created at")]
-        [Required(ErrorMessage="Created at DateTime is required.")]
-        public DateTime created_at{ get; set; }
-
-        [Display(Name = "Edited at")]
-        [Required(ErrorMessage = "Edited at DateTime is required.")]
-        public DateTime edited_at { get; set; }
-
+        
         public User()
         {
             Active = true;
-            created_at = DateTime.Now;
-            edited_at = DateTime.Now;
         }
     }
 }

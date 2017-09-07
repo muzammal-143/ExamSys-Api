@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ExamSys.Database.dbEntities
 {
-    public class Degree : Properties
+    public class Role : Properties
     {
         public int id { get; set; }
 
@@ -16,7 +16,7 @@ namespace ExamSys.Database.dbEntities
         public string Title { get; set; }
 
 
-        public Degree()
+        public Role()
         {
         }
     }

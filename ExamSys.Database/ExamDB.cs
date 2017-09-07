@@ -15,7 +15,7 @@ namespace ExamSys.Database
         public DbSet<DayTiming>                 DayTiming               { get; set; }
         public DbSet<Degree>                    Degrees                 { get; set; }
         public DbSet<Department>                Department              { get; set; }
-        public DbSet<Designation>               Designation             { get; set; }
+        public DbSet<Role>               Designation             { get; set; }
         public DbSet<Grades>                     Grade                   { get; set; }
         public DbSet<History>                   History                 { get; set; }
         public DbSet<Result_Type>               Result_Type             { get; set; }

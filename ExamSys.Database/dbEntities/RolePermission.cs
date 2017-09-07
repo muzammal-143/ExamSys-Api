@@ -7,14 +7,12 @@ using System.Threading.Tasks;
 
 namespace ExamSys.Database.dbEntities
 {
-    public class Result_Type : Properties
+    public class RolePermission : Properties
     {
-        public int id { get; set; }
-        public string Type { get; set; }
-
-        
-        public Result_Type()
-        {
-        }
+        public int Id { get; set; }
+        [Key]
+        public Role Role { get; set; }
+        [Key]
+        public Permission Permission { get; set; }
     }
 }

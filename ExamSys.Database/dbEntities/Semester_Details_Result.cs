@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ExamSys.Database.dbEntities
 {
-    public class Semester_Details_Result
+    public class Semester_Details_Result : Properties
     {
         public int           id          { get; set; }
         public double        Total       { get; set; }
