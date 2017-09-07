@@ -102,6 +102,7 @@
     <Compile Include="dbEntities\Semester_Details_Result.cs" />
     <Compile Include="dbEntities\Semester_Result.cs" />
     <Compile Include="dbEntities\Session_Course.cs" />
+    <Compile Include="dbEntities\Sheet.cs" />
     <Compile Include="dbEntities\Status.cs" />
     <Compile Include="dbEntities\Student.cs" />
     <Compile Include="dbEntities\Task.cs" />

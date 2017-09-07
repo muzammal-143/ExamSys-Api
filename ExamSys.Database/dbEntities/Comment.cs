@@ -10,13 +10,13 @@ namespace ExamSys.Database.dbEntities
 {
     public enum Comment_Type
     {
-        COMMENT         = 1,
-        COURSE          = 2,
-        HISTORY         = 3,
-        INVOICE         = 4,
-        SEMESTER_RESULT = 5,
-        TASK            = 6,
-        USER            = 7,
+        COMMENT,
+        COURSE,
+        HISTORY,
+        INVOICE,
+        SEMESTER_RESULT,
+        SHEET,
+        TASK
 
     }
     public class Comment : Properties

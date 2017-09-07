@@ -20,17 +20,11 @@ namespace ExamSys.Database.dbEntities
         public int Semester { get; set; }
 
         //Relations
-        [Display(Name = "Student")]
         public User      Student     { get; set; }
-        [Display(Name = "Department")]
         public Department    Department  { get; set; }
-        [Display(Name = "Course")]
         public Course       Course      { get; set; }
-        [Display(Name = "Result Type")]
         public Result_Type  Result_Type { get; set; }
         
-        //public int Status { get; set; }
-
 
         public Semester_Result()
         {
