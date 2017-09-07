@@ -15,6 +15,8 @@ namespace ExamSys.Database.dbEntities
         public double   Points      { get; set; }
         public string   Grade       { get; set; }
 
+        // Relation
+        public GradeRule GradeRule { get; set; }
         public Grades()
         {
         }

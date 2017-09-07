@@ -90,6 +90,7 @@
     <Compile Include="dbEntities\DayTiming.cs" />
     <Compile Include="dbEntities\Degree.cs" />
     <Compile Include="dbEntities\Department.cs" />
+    <Compile Include="dbEntities\GradeRule.cs" />
     <Compile Include="dbEntities\Invoice.cs" />
     <Compile Include="dbEntities\Permission.cs" />
     <Compile Include="dbEntities\Properties.cs" />
