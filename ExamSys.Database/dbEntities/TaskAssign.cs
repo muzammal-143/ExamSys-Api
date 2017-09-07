@@ -13,5 +13,6 @@ namespace ExamSys.Database.dbEntities
         public Task Task { get; set; }
         [Key]
         public User User { get; set; }
+        public bool Active { get; set; }
     }
 }
