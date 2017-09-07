@@ -42,7 +42,7 @@ namespace ExamSys.Database.dbEntities
         public string Message { get; set; }
         [Display(Name = "Assign to")]
         public int? Assign_to { get; set; }
-        [Display(Name = "Parent")]
+        [Display(Name = "Target Id")]
         public int? TargetId { get; set; }
         [Display(Name = "Comment Type")]
         public Comment_Type CommentType { get; set; }
