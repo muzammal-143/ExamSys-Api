@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dbEntities\Comment.cs" />
+    <Compile Include="dbEntities\CommentAssign.cs" />
     <Compile Include="dbEntities\Course.cs" />
     <Compile Include="dbEntities\DayTiming.cs" />
     <Compile Include="dbEntities\Degree.cs" />
@@ -104,6 +105,7 @@
     <Compile Include="dbEntities\Status.cs" />
     <Compile Include="dbEntities\Student.cs" />
     <Compile Include="dbEntities\Task.cs" />
+    <Compile Include="dbEntities\TaskAssign.cs" />
     <Compile Include="dbEntities\User.cs" />
     <Compile Include="ExamDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

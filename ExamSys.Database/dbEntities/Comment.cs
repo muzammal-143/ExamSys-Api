@@ -18,15 +18,6 @@ namespace ExamSys.Database.dbEntities
         [Required(ErrorMessage = "Type is required")]
         public string Type { get; set; }
 
-        // Timestamp
-        [Display(Name = "Created at")]
-        [Required(ErrorMessage="Created at DateTime is required.")]
-        public DateTime created_at{ get; set; }
-
-        [Display(Name = "Edited at")]
-        [Required(ErrorMessage = "Edited at DateTime is required.")]
-        public DateTime edited_at { get; set; }
-
         public Comment_Type()
         {
             created_at = DateTime.Now;
@@ -49,12 +40,11 @@ namespace ExamSys.Database.dbEntities
         [Display(Name = "Active")]
         public bool Active { get; set; }
 
-
-        
-
         public Comment()
         {
             Active = true;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
 }

@@ -12,7 +12,7 @@ namespace ExamSys.Database.dbEntities
     {
         public int      id      { get; set; }
 
-        //[Index(IsUnique = true)]
+        [UniqueTitle]
         public string   Title   { get; set; }
 
 
@@ -20,4 +20,28 @@ namespace ExamSys.Database.dbEntities
         {
         }
     }
+
+    private class UniqueTitle : ValidationAttribute
+    {
+        ExamDB db = new ExamDB();
+        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+        {
+            try
+            {
+                Status status = db.Status.Where(m => m.Title == value).FirstOrDefault();
+                if (status != null)
+                {
+                    return new ValidationResult("Error | Already exists", new[] {  });
+                }
+                return ValidationResult.Success;
+            }
+            catch (Exception ex)
+            {
+                return new ValidationResult(ex.Message);
+            }
+
+            
+        }
+    }
+
 }

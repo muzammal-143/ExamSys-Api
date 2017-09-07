@@ -22,9 +22,6 @@ namespace ExamSys.Database.dbEntities
         public Degree Degree { get; set; }
         public DayTiming DayTiming { get; set; }
 
-
-
-
         public Department()
         {
         }

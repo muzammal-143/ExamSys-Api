@@ -15,13 +15,10 @@ namespace ExamSys.Database.dbEntities
         public double       TM          { get; set; }
         [Display(Name = "Obtain Marks")]
         public double       OM          { get; set; }
-        [Display(Name = "Grade Points")]
-        public double       GP          { get; set; }
-        [Display(Name = "LG")]
-        public string       LG          { get; set; }
-
-        public int Session { get; set; }
+        
+        public string Session { get; set; }
         public int Semester { get; set; }
+
         //Relations
         [Display(Name = "Student")]
         public User      Student     { get; set; }
@@ -37,6 +34,8 @@ namespace ExamSys.Database.dbEntities
 
         public Semester_Result()
         {
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
         
     }
