@@ -12,9 +12,9 @@ namespace ExamSys.Database.dbEntities
     {
         public int      id      { get; set; }
 
-        [UniqueTitle]
+        [Key]
         public string   Title   { get; set; }
-
+        public string Description { get; set; }
 
         public Status()
         {
@@ -31,7 +31,7 @@ namespace ExamSys.Database.dbEntities
                 Status status = db.Status.Where(m => m.Title == value).FirstOrDefault();
                 if (status != null)
                 {
-                    return new ValidationResult("Error | Already exists", new[] {  });
+                    return new ValidationResult("Error | Already exists");
                 }
                 return ValidationResult.Success;
             }
@@ -39,8 +39,6 @@ namespace ExamSys.Database.dbEntities
             {
                 return new ValidationResult(ex.Message);
             }
-
-            
         }
     }
 

@@ -12,13 +12,13 @@ namespace ExamSys.Database.dbEntities
     public class Student : Properties
     {
         
-        [Key]
-        public int          id { get; set; }
         
+        public int          id { get; set; }
+        [Key]
         public string       Roll_No         { get; set; }
         //[Index(IsUnique = true)]
         public string RegistrationNo { get; set; }
-        public string       Session         { get; set; }
+        public Session Session { get; set; }
         public int          Semester        { get; set; }
 
         //Relations

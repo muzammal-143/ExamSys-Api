@@ -7,12 +7,15 @@ using System.Threading.Tasks;
 
 namespace ExamSys.Database.dbEntities
 {
-    public class RolePermission : Properties
+    public class Session : Properties
     {
-        public int Id { get; set; }
+        public int id { get; set; }
         [Key]
-        public Role Role { get; set; }
-        [Key]
-        public Permission Permission { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public Session()
+        {
+
+        }
     }
 }

@@ -20,4 +20,15 @@ namespace ExamSys.Database.dbEntities
         {
         }
     }
+    public class RolePermission : Properties
+    {
+        public int id { get; set; }
+        [Key]
+        public Role Role { get; set; }
+        [Key]
+        public Permission Permission { get; set; }
+        public RolePermission()
+        {
+        }
+    }
 }

@@ -11,11 +11,9 @@ namespace ExamSys.Database.dbEntities
     public class DayTiming : Properties
     {
         public int id { get; set; }
-
-        //[Index(IsUnique = true)]
-        public string Timing { get; set; }
-
-
+        [Key]
+        public string Title { get; set; }
+        public string Description { get; set; }
 
         public DayTiming()
         {

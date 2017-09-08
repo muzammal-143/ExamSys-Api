@@ -11,10 +11,9 @@ namespace ExamSys.Database.dbEntities
     public class Department : Properties
     {
         public int id { get; set; }
-
-        //[Index("Short Name", Order = 1, IsUnique = true)]
-        public string   ShortName       { get; set; }
-        public string   FullName        { get; set; }
+        [Key]
+        public string   Title       { get; set; }
+        public string   Description        { get; set; }
         public int      TotalSemesters  { get; set; }
         public string   Color           { get; set; }
         

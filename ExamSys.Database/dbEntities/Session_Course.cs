@@ -11,11 +11,13 @@ namespace ExamSys.Database.dbEntities
     {   
 
         public int         id            { get; set; }
-        public string      Session       { get; set; }
+        [Key]
+        public Session Session { get; set; }
         public int         Semester      { get; set; }
 
         //Relations
         public Department    Department  { get; set; }
+        [Key]
         public Course       Course      { get; set; }
 
 

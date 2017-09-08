@@ -15,9 +15,9 @@ namespace ExamSys.Database.dbEntities
         [Display(Name = "Title")]
         public string Title { get; set; }
 
-        [Required(ErrorMessage = "Message is required")]
-        [Display(Name = "Message")]
-        public string Message { get; set; }
+        [Required(ErrorMessage = "Description is required")]
+        [Display(Name = "Description")]
+        public string Description { get; set; }
 
         [Display(Name = "User")]
         public User User { get; set; }

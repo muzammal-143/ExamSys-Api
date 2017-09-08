@@ -85,12 +85,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dbEntities\Comment.cs" />
-    <Compile Include="dbEntities\CommentAssign.cs" />
     <Compile Include="dbEntities\Course.cs" />
     <Compile Include="dbEntities\DayTiming.cs" />
     <Compile Include="dbEntities\Degree.cs" />
     <Compile Include="dbEntities\Department.cs" />
-    <Compile Include="dbEntities\GradeRule.cs" />
     <Compile Include="dbEntities\Invoice.cs" />
     <Compile Include="dbEntities\Permission.cs" />
     <Compile Include="dbEntities\Properties.cs" />
@@ -99,15 +97,15 @@
     <Compile Include="dbEntities\Grades.cs" />
     <Compile Include="dbEntities\History.cs" />
     <Compile Include="dbEntities\Result_Type.cs" />
-    <Compile Include="dbEntities\RolePermission.cs" />
     <Compile Include="dbEntities\Semester_Details_Result.cs" />
     <Compile Include="dbEntities\Semester_Result.cs" />
+    <Compile Include="dbEntities\Session.cs" />
     <Compile Include="dbEntities\Session_Course.cs" />
     <Compile Include="dbEntities\Sheet.cs" />
     <Compile Include="dbEntities\Status.cs" />
     <Compile Include="dbEntities\Student.cs" />
+    <Compile Include="dbEntities\StudentAddCourse.cs" />
     <Compile Include="dbEntities\Task.cs" />
-    <Compile Include="dbEntities\TaskAssign.cs" />
     <Compile Include="dbEntities\User.cs" />
     <Compile Include="ExamDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,7 +114,9 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="seeds\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

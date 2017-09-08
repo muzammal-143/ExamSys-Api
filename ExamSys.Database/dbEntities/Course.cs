@@ -11,8 +11,7 @@ namespace ExamSys.Database.dbEntities
     public class Course : Properties
     {
         public int      id          { get; set; }
-
-        //[Index(IsUnique = true)]
+        [Key]
         public string   Code        { get; set; }
         public int      CH          { get; set; }
         public string   Name        { get; set; }

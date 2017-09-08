@@ -16,7 +16,8 @@ namespace ExamSys.Database.dbEntities
         INVOICE,
         SEMESTER_RESULT,
         SHEET,
-        TASK
+        TASK,
+        USER
 
     }
     public class Comment : Properties
@@ -28,8 +29,17 @@ namespace ExamSys.Database.dbEntities
         
         public Comment()
         {
-            created_at = DateTime.Now;
-            edited_at = DateTime.Now;
+            new Properties();
         }
+    }
+
+    public class CommentAssign
+    {
+        public int id { get; set; }
+        [Key]
+        public Comment Comment { get; set; }
+        [Key]
+        public User User { get; set; }
+        public bool Active { get; set; }
     }
 }

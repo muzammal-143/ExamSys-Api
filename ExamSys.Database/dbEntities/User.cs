@@ -13,7 +13,6 @@ namespace ExamSys.Database.dbEntities
 
         [Key]
         public int id { get; set; }
-        //[Index(IsUnique = true)]
         public string UserName { get; set; }
         public string Password { get; set; }
         public Role Role { get; set; }
@@ -29,5 +28,14 @@ namespace ExamSys.Database.dbEntities
         {
             Active = true;
         }
+    }
+    public class UserPermission : Properties
+    {
+        public int id { get; set; }
+        [Key]
+        public Role Role { get; set; }
+        [Key]
+        public Permission Permission { get; set; }
+        public DateTime expire_at { get; set; }
     }
 }

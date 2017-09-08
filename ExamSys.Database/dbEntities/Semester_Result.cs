@@ -15,21 +15,19 @@ namespace ExamSys.Database.dbEntities
         public double       TM          { get; set; }
         [Display(Name = "Obtain Marks")]
         public double       OM          { get; set; }
-        
-        public string Session { get; set; }
+
+        public Session Session { get; set; }
         public int Semester { get; set; }
 
         //Relations
         public User      Student     { get; set; }
         public Department    Department  { get; set; }
-        public Course       Course      { get; set; }
+        public Session_Course Session_Course { get; set; }
         public Result_Type  Result_Type { get; set; }
         
 
         public Semester_Result()
         {
-            created_at = DateTime.Now;
-            edited_at = DateTime.Now;
         }
         
     }

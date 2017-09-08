@@ -7,29 +7,38 @@ using System.Threading.Tasks;
 
 namespace ExamSys.Database.dbEntities
 {
-    public enum TaskStatus
+    public class TaskStatus : Properties
     {
-        START,
-        COMPLETE,
-        PENDING,
-        DELAY
+        public int Id { get; set; }
+        [Key]
+        public string Title { get; set; }
+        public string Description { get; set; }
     }
+
     public class Task : Properties
     {
         public int id { get; set; }
+        public string Title { get; set; }
         public string Description { get; set; }
-        
-        public User assign_to { get; set; }
         public TaskStatus Status { get; set; }
         public bool       Active { get; set; }
 
-
-       
-
         public Task()
         {
-            Status = TaskStatus.START;
             Active = true;
         }
     }
+
+    public class TaskAssign : Properties
+    {
+        public int id { get; set; }
+        [Key]
+        public Task Task { get; set; }
+        [Key]
+        public User User { get; set; }
+        public TaskStatus Status { get; set; }
+        public bool Active { get; set; }
+    }
+
+
 }

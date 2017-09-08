@@ -10,7 +10,6 @@ namespace ExamSys.Database.dbEntities
     public class Semester_Details_Result
     {
         public int           id          { get; set; }
-        public double        Total       { get; set; }
         public double        Obtain      { get; set; }
 
         // Relations

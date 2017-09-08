@@ -11,10 +11,9 @@ namespace ExamSys.Database.dbEntities
     public class Degree : Properties
     {
         public int id { get; set; }
-
-        //[Index(IsUnique = true)]
+        [Key]
         public string Title { get; set; }
-
+        public string Description { get; set; }
 
         public Degree()
         {
