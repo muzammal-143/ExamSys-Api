@@ -13,12 +13,9 @@ namespace ExamSys.Database.dbEntities
 
         public string Title { get; set; }
         public string Description { get; set; }
-
         public double Total { get; set; }
-        public Session Session { get; set; }
-        public int Semester { get; set; }
+        
         //Relations
-        public Department Department { get; set; }
         public Session_Course Session_Course { get; set; }
         public Result_Type Result_Type { get; set; }
 

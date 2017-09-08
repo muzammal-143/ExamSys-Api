@@ -97,7 +97,6 @@
     <Compile Include="dbEntities\Grades.cs" />
     <Compile Include="dbEntities\History.cs" />
     <Compile Include="dbEntities\Result_Type.cs" />
-    <Compile Include="dbEntities\Semester_Details_Result.cs" />
     <Compile Include="dbEntities\Semester_Result.cs" />
     <Compile Include="dbEntities\Session.cs" />
     <Compile Include="dbEntities\Session_Course.cs" />

@@ -10,9 +10,10 @@ namespace ExamSys.Database.dbEntities
     public class Result_Type : Properties
     {
         public int id { get; set; }
-        public string Type { get; set; }
+        [Key]
+        public string Title { get; set; }
+        public string Description { get; set; }
 
-        
         public Result_Type()
         {
         }

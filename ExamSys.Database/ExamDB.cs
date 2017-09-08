@@ -19,7 +19,7 @@ namespace ExamSys.Database
         public DbSet<Grades>                     Grade                   { get; set; }
         public DbSet<History>                   History                 { get; set; }
         public DbSet<Result_Type>               Result_Type             { get; set; }
-        public DbSet<Semester_Details_Result>   Semester_Details_Result { get; set; }
+        public DbSet<Semester_Result>   Semester_Details_Result { get; set; }
         public DbSet<Semester_Result>           Semester_Result         { get; set; }
         public DbSet<Session_Course>            Session_Course          { get; set; }
         public DbSet<Status>                    Status                  { get; set; }
