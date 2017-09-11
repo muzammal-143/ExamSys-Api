@@ -17,6 +17,11 @@ namespace ExamSys.Database.dbEntities
 
         public DayTiming()
         {
+            new Properties();
+        }
+        public DayTiming(User user)
+        {
+            new Properties(user);
         }
     }
 

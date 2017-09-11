@@ -13,13 +13,14 @@ namespace ExamSys.Database.dbEntities
         public int      id          { get; set; }
         [Key]
         public string   Code        { get; set; }
-        public int      CH          { get; set; }
         public string   Name        { get; set; }
+        public int CH { get; set; }
 
         
 
         public Course()
         {
+            new Properties();
         }
     }
 }

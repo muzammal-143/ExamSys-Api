@@ -22,6 +22,14 @@ namespace ExamSys.Database.dbEntities
 
         public Properties()
         {
+            created_by = new ExamDB().User.Find(1); // System
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
+        }
+        public Properties(User user)
+        {
+            created_by = user;
             isDeleted = false;
             created_at = DateTime.Now;
             edited_at = DateTime.Now;

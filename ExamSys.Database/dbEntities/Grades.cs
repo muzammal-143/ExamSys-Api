@@ -14,6 +14,11 @@ namespace ExamSys.Database.dbEntities
         public string Description { get; set; }
         public GradeRule()
         {
+            new Properties();
+        }
+        public GradeRule(User user)
+        {
+            new Properties(user);
         }
     }
     public class Grades : Properties
@@ -28,6 +33,11 @@ namespace ExamSys.Database.dbEntities
         public GradeRule GradeRule { get; set; }
         public Grades()
         {
+            new Properties();
+        }
+        public Grades(User user)
+        {
+            new Properties(user);
         }
     }
 }

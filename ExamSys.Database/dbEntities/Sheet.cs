@@ -7,6 +7,16 @@ using System.Threading.Tasks;
 
 namespace ExamSys.Database.dbEntities
 {
+    public enum ResultType
+    {
+        FINAL,
+        MID,
+        QUIZ,
+        ASSIGNMENT,
+        ATTENDENCE,
+        PRESENTATION
+    }
+
     public class Sheet : Properties
     {
         public int Id { get; set; }
@@ -16,8 +26,8 @@ namespace ExamSys.Database.dbEntities
         public double Total { get; set; }
         
         //Relations
-        public Session_Course Session_Course { get; set; }
-        public Result_Type Result_Type { get; set; }
+        public SessionCourse Session_Course { get; set; }
+        public ResultType ResultType { get; set; }
 
         public bool Save { get; set; }
         public bool EditAble { get; set; }
@@ -30,9 +40,30 @@ namespace ExamSys.Database.dbEntities
             EditAble = true;
             Submited = false;
             approved = false;
+            new Properties();
+        }
+        public Sheet(User user)
+        {
+            Save = true;
+            EditAble = true;
+            Submited = false;
+            approved = false;
+            new Properties(user);
         }
     }
+    public class SheetResult
+    {
+        public int id { get; set; }
+        public double Obtain { get; set; }
 
+        // Relations
+        public User Student { get; set; }
+        public Sheet Sheet { get; set; }
+
+        public SheetResult()
+        {
+        }
+    }
     public class SheetApprove : Properties
     {
         public int id { get; set; }
@@ -42,6 +73,11 @@ namespace ExamSys.Database.dbEntities
         public User User { get; set; }
         public SheetApprove()
         {
+            new Properties();
+        }
+        public SheetApprove(User user)
+        {
+            new Properties(user);
         }
     }
 

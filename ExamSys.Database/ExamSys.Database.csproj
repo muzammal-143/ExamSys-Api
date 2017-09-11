@@ -89,33 +89,45 @@
     <Compile Include="dbEntities\DayTiming.cs" />
     <Compile Include="dbEntities\Degree.cs" />
     <Compile Include="dbEntities\Department.cs" />
+    <Compile Include="dbEntities\Fachlty.cs" />
+    <Compile Include="dbEntities\File.cs" />
     <Compile Include="dbEntities\Invoice.cs" />
     <Compile Include="dbEntities\Permission.cs" />
+    <Compile Include="dbEntities\Post.cs" />
     <Compile Include="dbEntities\Properties.cs" />
     <Compile Include="dbEntities\Role.cs" />
     <Compile Include="dbEntities\ExamSettings.cs" />
     <Compile Include="dbEntities\Grades.cs" />
     <Compile Include="dbEntities\History.cs" />
-    <Compile Include="dbEntities\Result_Type.cs" />
-    <Compile Include="dbEntities\Semester_Result.cs" />
+    <Compile Include="dbEntities\Result.cs" />
     <Compile Include="dbEntities\Session.cs" />
-    <Compile Include="dbEntities\Session_Course.cs" />
     <Compile Include="dbEntities\Sheet.cs" />
-    <Compile Include="dbEntities\Status.cs" />
     <Compile Include="dbEntities\Student.cs" />
     <Compile Include="dbEntities\StudentAddCourse.cs" />
     <Compile Include="dbEntities\Task.cs" />
     <Compile Include="dbEntities\User.cs" />
     <Compile Include="ExamDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="seeds\seed_All.cs" />
+    <Compile Include="seeds\seed_Course.cs" />
+    <Compile Include="seeds\seed_DayTiming.cs" />
+    <Compile Include="seeds\seed_Degrees.cs" />
+    <Compile Include="seeds\seed_Departments.cs" />
+    <Compile Include="seeds\seed_Designations.cs" />
+    <Compile Include="seeds\seed_Faculties.cs" />
+    <Compile Include="seeds\seed_Grades.cs" />
+    <Compile Include="seeds\seed_Result_Types.cs" />
+    <Compile Include="seeds\seed_Semester_Details_Results.cs" />
+    <Compile Include="seeds\seed_Session_Courses.cs" />
+    <Compile Include="seeds\seed_Statuses.cs" />
+    <Compile Include="seeds\seed_Students.cs" />
+    <Compile Include="seeds\seed_User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="seeds\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -14,19 +14,34 @@ namespace ExamSys.Database.dbEntities
         [Key]
         public string   Title       { get; set; }
         public string   Description        { get; set; }
-        public int      TotalSemesters  { get; set; }
         public string   Color           { get; set; }
-        
-        //Relation
-        public Degree Degree { get; set; }
-        public DayTiming DayTiming { get; set; }
 
         public Department()
         {
+            new Properties();
+        }
+        public Department(User user)
+        {
+            new Properties(user);
         }
     }
 
-
+    public class DepartmentDegree : Properties
+    {
+        public int Id { get; set; }
+        [Key]
+        public Department Department { get; set; }
+        [Key]
+        public Degree Degree { get; set; }
+        public DepartmentDegree()
+        {
+            new Properties();
+        }
+        public DepartmentDegree(User user)
+        {
+            new Properties(user);
+        }
+    }
 
 }
 

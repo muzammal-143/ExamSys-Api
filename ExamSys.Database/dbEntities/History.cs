@@ -24,6 +24,11 @@ namespace ExamSys.Database.dbEntities
         
         public History()
         {
+            new Properties();
+        }
+        public History(User user)
+        {
+            new Properties(user);
         }
     }
 }

@@ -13,6 +13,15 @@ namespace ExamSys.Database.dbEntities
         [Key]
         public string Title { get; set; }
         public string Description { get; set; }
+        
+        public TaskStatus()
+        {
+            new Properties();
+        }
+        public TaskStatus(User user)
+        {
+            new Properties(user);
+        }
     }
 
     public class Task : Properties
@@ -26,6 +35,12 @@ namespace ExamSys.Database.dbEntities
         public Task()
         {
             Active = true;
+            new Properties();
+        }
+        public Task(User user)
+        {
+            Active = true;
+            new Properties(user);
         }
     }
 
@@ -38,6 +53,15 @@ namespace ExamSys.Database.dbEntities
         public User User { get; set; }
         public TaskStatus Status { get; set; }
         public bool Active { get; set; }
+        
+        public TaskAssign()
+        {
+            new Properties();
+        }
+        public TaskAssign(User user)
+        {
+            new Properties(user);
+        }
     }
 
 

@@ -10,32 +10,62 @@ namespace ExamSys.Database.dbEntities
 {
     public class User : Properties
     {
-
-        [Key]
         public int id { get; set; }
+        [Key]
         public string UserName { get; set; }
         public string Password { get; set; }
-        public Role Role { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Gender { get; set; }
-        public string Picture { get; set; }
         public string Email { get; set; }
         public bool   Active { get; set; }
 
-        
         public User()
         {
             Active = true;
+            new Properties();
+        }
+        public User(User user)
+        {
+            Active = true;
+            new Properties(user);
+        }
+
+    }
+
+    public class UserRole : Properties
+    {
+        public int Id { get; set; }
+        [Key]
+        public User User { get; set; }
+        [Key]
+        public Role Role { get; set; }
+        public UserRole()
+        {
+            new Properties();
+        }
+        public UserRole(User user)
+        {
+            new Properties(user);
         }
     }
+
     public class UserPermission : Properties
     {
         public int id { get; set; }
         [Key]
-        public Role Role { get; set; }
+        public User User { get; set; }
         [Key]
         public Permission Permission { get; set; }
         public DateTime expire_at { get; set; }
+        public UserPermission()
+        {
+            new Properties();
+        }
+        public UserPermission(User user)
+        {
+            new Properties(user);
+        }
     }
+
 }

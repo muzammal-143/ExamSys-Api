@@ -14,8 +14,13 @@ namespace ExamSys.Database.dbEntities
         [Key]
         public string Title { get; set; }
         public string Description { get; set; }
-        public InvoiceType() 
+        public InvoiceType()
         {
+            new Properties();
+        }
+        public InvoiceType(User user)
+        {
+            new Properties(user);
         }
     }
 
@@ -27,11 +32,16 @@ namespace ExamSys.Database.dbEntities
         public string Title { get; set; }
         public string Description { get; set; }
         public bool Expired { get; set; }
-        public Invoice() 
+        
+        public Invoice()
         {
             Expired = false;
-            created_at = DateTime.Now;
-            edited_at = DateTime.Now;
+            new Properties();
+        }
+        public Invoice(User user)
+        {
+            Expired = false;
+            new Properties(user);
         }
         
     }

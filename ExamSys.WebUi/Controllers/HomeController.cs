@@ -12,9 +12,14 @@ namespace ExamSys.WebUi.Controllers
         ExamDB db = new ExamDB();
         public ActionResult Index()
         {
-            var s = db.Comment.ToList();
+            //var s = db.Comment.ToList();
             ViewBag.Title = "Home Page";
 
+            return View();
+        }
+
+        public ActionResult StartPage() 
+        {
             return View();
         }
     }

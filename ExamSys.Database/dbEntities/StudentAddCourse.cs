@@ -9,19 +9,19 @@ namespace ExamSys.Database.dbEntities
     public class StudentAddCourse : Properties
     {
         public int id { get; set; }
-        public Session Session { get; set; }
-        public int Semester { get; set; }
 
         //Relations
-        public Department Department { get; set; }
-        public Course Course { get; set; }
+        public SessionCourse Session_Course { get; set; }
 
         public User User { get; set; }
 
         public StudentAddCourse()
         {
-            created_at = DateTime.Now;
-            edited_at  = DateTime.Now;
+            new Properties();
+        }
+        public StudentAddCourse(User user)
+        {
+            new Properties(user);
         }
 
     }

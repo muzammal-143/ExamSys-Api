@@ -18,6 +18,11 @@ namespace ExamSys.Database.dbEntities
 
         public Role()
         {
+            new Properties();
+        }
+        public Role(User user)
+        {
+            new Properties(user);
         }
     }
     public class RolePermission : Properties
@@ -29,6 +34,11 @@ namespace ExamSys.Database.dbEntities
         public Permission Permission { get; set; }
         public RolePermission()
         {
+            new Properties();
+        }
+        public RolePermission(User user)
+        {
+            new Properties(user);
         }
     }
 }

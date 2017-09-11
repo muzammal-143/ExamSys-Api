@@ -7,14 +7,21 @@ using System.Threading.Tasks;
 
 namespace ExamSys.Database.dbEntities
 {
+
     public class Permission : Properties
     {
         public int Id { get; set; }
         [Key]
         public string Title { get; set; }
         public string Description { get; set; }
+
         public Permission()
         {
+            new Properties();
+        }
+        public Permission(User user)
+        {
+            new Properties(user);
         }
     }
 }

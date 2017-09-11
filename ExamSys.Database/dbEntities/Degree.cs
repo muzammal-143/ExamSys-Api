@@ -15,8 +15,19 @@ namespace ExamSys.Database.dbEntities
         public string Title { get; set; }
         public string Description { get; set; }
 
+        public int Years { get; set; }
+        public int TotalSemesters { get; set; }
+
+        // Relations
+        public DayTiming DayTiming { get; set; }
         public Degree()
         {
+            new Properties();
+        }
+        public Degree(User user)
+        {
+            new Properties(user);
         }
     }
+    
 }
