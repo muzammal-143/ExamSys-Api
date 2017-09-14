@@ -18,8 +18,30 @@ namespace ExamSys.Database.dbEntities
         public int Years { get; set; }
         public int TotalSemesters { get; set; }
 
-        // Relations
-        public DayTiming DayTiming { get; set; }
+        
+
+        public SessionDegree SessionDegree
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public DepartmentDegree DepartmentDegree
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+    
         public Degree()
         {
             new Properties();

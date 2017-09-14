@@ -95,6 +95,7 @@
     <Compile Include="dbEntities\Permission.cs" />
     <Compile Include="dbEntities\Post.cs" />
     <Compile Include="dbEntities\Properties.cs" />
+    <Compile Include="dbEntities\ResultType.cs" />
     <Compile Include="dbEntities\Role.cs" />
     <Compile Include="dbEntities\ExamSettings.cs" />
     <Compile Include="dbEntities\Grades.cs" />
@@ -125,6 +126,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="dbEntities\ClassDiagram.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

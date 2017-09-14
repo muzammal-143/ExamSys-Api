@@ -11,6 +11,8 @@ namespace ExamSys.Database.dbEntities
     public class User : Properties
     {
         public int id { get; set; }
+        [UniqueCNIC]
+        public string CNIC { get; set; }
         [Key]
         public string UserName { get; set; }
         public string Password { get; set; }
@@ -19,6 +21,8 @@ namespace ExamSys.Database.dbEntities
         public string Gender { get; set; }
         public string Email { get; set; }
         public bool   Active { get; set; }
+
+        public List<Role> Role { get; set; }
 
         public User()
         {
@@ -36,10 +40,29 @@ namespace ExamSys.Database.dbEntities
     public class UserRole : Properties
     {
         public int Id { get; set; }
-        [Key]
-        public User User { get; set; }
-        [Key]
-        public Role Role { get; set; }
+
+        public Role Role
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public User User
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+    
         public UserRole()
         {
             new Properties();
@@ -53,11 +76,30 @@ namespace ExamSys.Database.dbEntities
     public class UserPermission : Properties
     {
         public int id { get; set; }
-        [Key]
-        public User User { get; set; }
-        [Key]
-        public Permission Permission { get; set; }
         public DateTime expire_at { get; set; }
+
+        public Permission Permission
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public User User
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+    
         public UserPermission()
         {
             new Properties();

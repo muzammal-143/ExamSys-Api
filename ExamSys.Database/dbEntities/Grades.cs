@@ -12,6 +12,7 @@ namespace ExamSys.Database.dbEntities
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
+    
         public GradeRule()
         {
             new Properties();
@@ -29,8 +30,19 @@ namespace ExamSys.Database.dbEntities
         public double   Points      { get; set; }
         public string   Grade       { get; set; }
 
+        public GradeRule GradeRule
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         // Relation
-        public GradeRule GradeRule { get; set; }
+    
         public Grades()
         {
             new Properties();

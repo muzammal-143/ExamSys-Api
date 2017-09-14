@@ -68,9 +68,19 @@ namespace ExamSys.Database.dbEntities
     {
         public int id { get; set; }
         [Key]
-        public Sheet Sheet { get; set; }
-        [Key]
         public User User { get; set; }
+
+        public Sheet Sheet
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+    
         public SheetApprove()
         {
             new Properties();

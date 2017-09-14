@@ -14,6 +14,7 @@ namespace ExamSys.Database.dbEntities
         [Key]
         public string Title { get; set; }
         public string Description { get; set; }
+    
         public InvoiceType()
         {
             new Properties();
@@ -28,10 +29,20 @@ namespace ExamSys.Database.dbEntities
     {
         public int Id { get; set; }
         public double Rs { get; set; }
-        public InvoiceType Type { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public bool Expired { get; set; }
+
+        public InvoiceType InvoiceType
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
         
         public Invoice()
         {

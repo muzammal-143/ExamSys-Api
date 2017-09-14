@@ -20,10 +20,19 @@ namespace ExamSys.Database.dbEntities
         public string RegistrationNo { get; set; }
 
         //Relations
-        [Key]
-        public User          User            { get; set; }
         public Department    Department      { get; set; }
         public Status Status { get; set; }
+
+        public User User
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
 
         public Student()
         {
@@ -60,15 +69,35 @@ namespace ExamSys.Database.dbEntities
         PASS,
         DROP,
     }
-    public class StudentCourse 
+    public class StudentDegreeCourse 
     {
         public int Id { get; set; }
         [Key]
-        public User User { get; set; }
-        [Key]
-        public Course Course { get; set; }
+        
         public int Semester { get; set; }
         public int CH { get; set; }
+
+        public Course Course
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public StudentDegree StudentDegree
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 
     // Validation
@@ -109,6 +138,53 @@ namespace ExamSys.Database.dbEntities
             catch (Exception ex)
             {
                 return new ValidationResult(ex.Message);
+            }
+        }
+    }
+
+    public class StudentDegree
+    {
+        public int Id
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Student Student
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Degree Degree
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public DayTiming DayTiming
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
             }
         }
     }

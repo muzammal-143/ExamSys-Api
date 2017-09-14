@@ -15,6 +15,7 @@ namespace ExamSys.Database.dbEntities
         public string Description { get; set; }
         public bool Active { get; set; }
 
+
         public Session()
         {
             new Properties();
@@ -28,12 +29,35 @@ namespace ExamSys.Database.dbEntities
     public class SessionDegree : Properties
     {
         public int id { get; set; }
-        [Key]
-        public Session Session { get; set; }
+        
         [Key]
         public Degree Degree { get; set; }
         
         public bool Active { get; set; }
+
+        // Relatins
+
+        public DayTiming DayTiming
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Session Session
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
 
         public SessionDegree()
         {
@@ -47,7 +71,7 @@ namespace ExamSys.Database.dbEntities
         }
     }
 
-    public class SessionCourse : Properties
+    public class SessionDegreeCourse : Properties
     {
 
         public int id { get; set; }
@@ -55,43 +79,195 @@ namespace ExamSys.Database.dbEntities
 
         //Relations
         [Key]
-        public Session Session { get; set; }
-        public Department Department { get; set; }
+        public DayTiming DayTiming { get; set; }
         [Key]
-        public Course Course { get; set; }
 
+        public int CH { get; set; }
 
+        public SessionDegreeCourse_ResultType SessionDegreeCourse_ResultType
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
 
-        public SessionCourse()
+        public Course Course
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Fachlty Fachlty
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public SessionDegree SessionDegree
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public SessionDegreeCourse()
         {
             new Properties();
         }
-        public SessionCourse(User user)
+        public SessionDegreeCourse(User user)
+        {
+            new Properties(user);
+        }
+
+    }
+    public class SessionDegreeCourse_ResultType : Properties
+    {
+
+        public int id { get; set; }
+        public int Semester { get; set; }
+
+        //Relations
+        [Key]
+        public SessionDegreeCourse SessionDegreeCourse { get; set; }
+        [Key]
+        public ResultType ResultType { get; set; }
+
+        public SessionDegreeCourse_ResultType()
+        {
+            new Properties();
+        }
+        public SessionDegreeCourse_ResultType(User user)
         {
             new Properties(user);
         }
 
     }
 
-    public class SessionStudent : Properties
+    public class SessionDegreeStudent : Properties
     {
         public int Id { get; set; }
-        [Key]
-        public Student Student { get; set; }
-        [Key]
-        public Session Session { get; set; }
         public int Semester { get; set; }
 
-        public SessionStudent()
+        // Relations
+        [Key]
+        public Session Session { get; set; }
+
+        public SessionDegree SessionDegree
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Student Student
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+        
+        
+
+        public SessionDegreeStudent()
         {
             Semester = 1;
             new Properties();
         }
-        public SessionStudent(User user)
+        public SessionDegreeStudent(User user)
         {
             Semester = 1;
             new Properties(user);
         }
+    }
+
+    public class SessionDepartment : Properties
+    {
+        public int Id { get; set; }
+
+        public Session Session
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Department Department
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+    
+        public SessionDepartment()
+        {
+            new Properties();
+        }
+        public SessionDepartment(User user)
+        {
+            new Properties(user);
+        }
+    }
+
+    public class SessionDepartmentDegree : Properties
+    {
+        public int Id { get; set; }
+
+        public Degree Degree
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public SessionDepartment SessionDepartment
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+        
     }
 
 

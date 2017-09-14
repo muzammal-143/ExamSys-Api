@@ -37,9 +37,18 @@ namespace ExamSys.Database.dbEntities
     {
         public int id { get; set; }
         [Key]
-        public Comment Comment { get; set; }
-        [Key]
         public User User { get; set; }
         public bool Active { get; set; }
+
+        public Comment Comment
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }

@@ -14,10 +14,7 @@ namespace ExamSys.Database.dbEntities
         [Key]
         public string   Code        { get; set; }
         public string   Name        { get; set; }
-        public int CH { get; set; }
-
         
-
         public Course()
         {
             new Properties();

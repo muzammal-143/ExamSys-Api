@@ -26,22 +26,6 @@ namespace ExamSys.Database.dbEntities
         }
     }
 
-    public class DepartmentDegree : Properties
-    {
-        public int Id { get; set; }
-        [Key]
-        public Department Department { get; set; }
-        [Key]
-        public Degree Degree { get; set; }
-        public DepartmentDegree()
-        {
-            new Properties();
-        }
-        public DepartmentDegree(User user)
-        {
-            new Properties(user);
-        }
-    }
 
 }
 

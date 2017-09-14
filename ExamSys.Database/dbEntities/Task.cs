@@ -29,8 +29,29 @@ namespace ExamSys.Database.dbEntities
         public int id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public TaskStatus Status { get; set; }
         public bool       Active { get; set; }
+
+        public TaskAssign TaskAssign
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public TaskStatus TaskStatus
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
 
         public Task()
         {

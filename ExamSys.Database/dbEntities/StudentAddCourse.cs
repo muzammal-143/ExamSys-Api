@@ -11,7 +11,7 @@ namespace ExamSys.Database.dbEntities
         public int id { get; set; }
 
         //Relations
-        public SessionCourse Session_Course { get; set; }
+        public Course Course { get; set; }
 
         public User User { get; set; }
 
