@@ -30,8 +30,7 @@ namespace ExamSys.Database.dbEntities
     {
         public int id { get; set; }
         
-        [Key]
-        public Degree Degree { get; set; }
+        
         
         public bool Active { get; set; }
 
@@ -49,6 +48,17 @@ namespace ExamSys.Database.dbEntities
         }
 
         public Session Session
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Degree Degree
         {
             get
             {
@@ -118,6 +128,17 @@ namespace ExamSys.Database.dbEntities
         }
 
         public SessionDegree SessionDegree
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public ResultTypeRule ResultTypeRule
         {
             get
             {
@@ -258,6 +279,17 @@ namespace ExamSys.Database.dbEntities
         }
 
         public SessionDepartment SessionDepartment
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public DayTiming DayTiming
         {
             get
             {

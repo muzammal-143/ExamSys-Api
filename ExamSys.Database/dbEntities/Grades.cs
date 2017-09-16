@@ -12,6 +12,17 @@ namespace ExamSys.Database.dbEntities
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
+
+        public Grades Grades
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     
         public GradeRule()
         {
@@ -28,18 +39,7 @@ namespace ExamSys.Database.dbEntities
         public double   Lower_Range { get; set; }
         public double   Upper_Range { get; set; }
         public double   Points      { get; set; }
-        public string   Grade       { get; set; }
-
-        public GradeRule GradeRule
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public string Grade { get; set; }
 
         // Relation
     

@@ -10,10 +10,30 @@ namespace ExamSys.Database.dbEntities
     {
         public int id { get; set; }
 
-        //Relations
-        public Course Course { get; set; }
+        public StudentCourse StudentCourse
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
 
-        public User User { get; set; }
+        public StudentAddCourse_Type Type
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+        public int TypeValue { get; set; }
+
+        //Relations
 
         public StudentAddCourse()
         {

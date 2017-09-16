@@ -33,6 +33,8 @@ namespace ExamSys.Database.dbEntities
             }
         }
 
+        public bool Active { get; set; }
+
         public Fachlty()
         {
             new Properties();

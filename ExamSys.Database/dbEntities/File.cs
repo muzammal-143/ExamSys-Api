@@ -14,8 +14,19 @@ namespace ExamSys.Database.dbEntities
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public FileType FileType { get; set; }
         public int TargetId { get; set; }
+
+        public FileType FileType
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+    
         public File()
         {
             new Properties();

@@ -84,6 +84,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dbEntities\Activity.cs" />
     <Compile Include="dbEntities\Comment.cs" />
     <Compile Include="dbEntities\Course.cs" />
     <Compile Include="dbEntities\DayTiming.cs" />
@@ -109,6 +110,7 @@
     <Compile Include="dbEntities\User.cs" />
     <Compile Include="ExamDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResitStudent.cs" />
     <Compile Include="seeds\seed_All.cs" />
     <Compile Include="seeds\seed_Course.cs" />
     <Compile Include="seeds\seed_DayTiming.cs" />

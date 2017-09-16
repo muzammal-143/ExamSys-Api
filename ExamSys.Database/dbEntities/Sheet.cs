@@ -7,15 +7,7 @@ using System.Threading.Tasks;
 
 namespace ExamSys.Database.dbEntities
 {
-    public enum ResultType
-    {
-        FINAL,
-        MID,
-        QUIZ,
-        ASSIGNMENT,
-        ATTENDENCE,
-        PRESENTATION
-    }
+
 
     public class Sheet : Properties
     {
@@ -24,15 +16,79 @@ namespace ExamSys.Database.dbEntities
         public string Title { get; set; }
         public string Description { get; set; }
         public double Total { get; set; }
-        
+
         //Relations
-        public SessionCourse Session_Course { get; set; }
-        public ResultType ResultType { get; set; }
 
         public bool Save { get; set; }
         public bool EditAble { get; set; }
         public bool Submited { get; set; }
         public bool approved { get; set; }
+
+        public string State { get; set; } // Summer or Semester
+        public int StateAct { get; set; } // if summer then StateAct will be year else Semester#
+
+        public ResultType ResultType
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+        public Course Course
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+        public Fachlty Fachlty
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+        public Session Session
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+        public Degree Degree
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+        public DayTiming DayTiming
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        
 
         public Sheet()
         {
@@ -57,8 +113,28 @@ namespace ExamSys.Database.dbEntities
         public double Obtain { get; set; }
 
         // Relations
-        public User Student { get; set; }
-        public Sheet Sheet { get; set; }
+
+        public Sheet Sheet
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Student Student
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
 
         public SheetResult()
         {

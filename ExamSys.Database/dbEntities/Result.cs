@@ -12,9 +12,73 @@ namespace ExamSys.Database.dbEntities
         public int           id          { get; set; }
         public double        Obtain      { get; set; }
 
+        public Student Student
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public DayTiming DayTiming
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Degree Degree
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Session Session
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Course Course
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public ResultType ResultType
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         // Relations
-        public User Student { get; set; }
-        public Sheet Sheet { get; set; }
 
         public Result()
         {

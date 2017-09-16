@@ -20,9 +20,18 @@ namespace ExamSys.Database.dbEntities
         public string LastName { get; set; }
         public string Gender { get; set; }
         public string Email { get; set; }
-        public bool   Active { get; set; }
+        public bool Active { get; set; }
 
-        public List<Role> Role { get; set; }
+        public UserStudent UserStudent
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
 
         public User()
         {
@@ -109,5 +118,13 @@ namespace ExamSys.Database.dbEntities
             new Properties(user);
         }
     }
+
+    public enum StudentAddCourse_Type
+    {
+        SEMESTER,
+        SUMMER,
+    }
+
+
 
 }

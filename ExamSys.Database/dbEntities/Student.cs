@@ -12,18 +12,46 @@ namespace ExamSys.Database.dbEntities
     public class Student : Properties
     {
         
-        
         public int          id { get; set; }
         [UniqueRollNo]
-        public string       RollNo         { get; set; }
-        [UniqueRegistrationNo]
-        public string RegistrationNo { get; set; }
-
+        public string RollNo { get; set; }
         //Relations
-        public Department    Department      { get; set; }
         public Status Status { get; set; }
 
         public User User
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public DayTiming DayTiming
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Degree Degree
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public StudentStatus StudentStatus
         {
             get
             {
@@ -69,7 +97,7 @@ namespace ExamSys.Database.dbEntities
         PASS,
         DROP,
     }
-    public class StudentDegreeCourse 
+    public class StudentCourse 
     {
         public int Id { get; set; }
         [Key]
@@ -88,7 +116,40 @@ namespace ExamSys.Database.dbEntities
             }
         }
 
-        public StudentDegree StudentDegree
+        public Student Student
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public ResultTypeRule ResultTypeRule
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Session Session
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Fachlty Fachlty
         {
             get
             {
@@ -187,7 +248,101 @@ namespace ExamSys.Database.dbEntities
             {
             }
         }
+
+        public StudentDegreeStatus StudentDegreeStatus
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
-    
+
+    public enum StudentStatus
+    {
+        ACTIVE,
+        COMPLETED,
+        FREEZE,
+    }
+
+    public class StudentSession
+    {
+        public int Id
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Student Student
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Session Session
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+    }
+
+    public class Registration
+    {
+        public User User
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Student Student
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        [UniqueRegistrationNo]
+        public string RegistrationNo { get; set; }
+
+        public int id { get; set; }
+
+        public int Active
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+    }
 
 }

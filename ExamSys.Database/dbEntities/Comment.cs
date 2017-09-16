@@ -24,9 +24,19 @@ namespace ExamSys.Database.dbEntities
     public class Comment : Properties
     {
         public int id { get; set; }
-        public CommentType CommentType { get; set; }
         public string Message { get; set; }
         public int TargetId { get; set; }
+
+        public CommentType CommentType
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
         
         public Comment()
         {
