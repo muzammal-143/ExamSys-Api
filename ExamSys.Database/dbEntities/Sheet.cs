@@ -22,10 +22,7 @@ namespace ExamSys.Database.dbEntities
         public bool Save { get; set; }
         public bool EditAble { get; set; }
         public bool Submited { get; set; }
-        public bool approved { get; set; }
-
-        public string State { get; set; } // Summer or Semester
-        public int StateAct { get; set; } // if summer then StateAct will be year else Semester#
+        public bool approved { get; set; } // Summer or Semester // if summer then StateAct will be year else Semester#
 
         public ResultType ResultType
         {
@@ -37,17 +34,7 @@ namespace ExamSys.Database.dbEntities
             {
             }
         }
-        public Course Course
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-        public Fachlty Fachlty
+        public Faculty Fachlty
         {
             get
             {
@@ -88,7 +75,40 @@ namespace ExamSys.Database.dbEntities
             }
         }
 
-        
+        public bool Resit { get; set; }
+
+        public StudentCourse StudentCourse
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public SessionPart SessionPart
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int SessionPartValue
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
 
         public Sheet()
         {
@@ -107,13 +127,12 @@ namespace ExamSys.Database.dbEntities
             new Properties(user);
         }
     }
-    public class SheetResult
+    public class SheetMarks
     {
         public int id { get; set; }
         public double Obtain { get; set; }
 
         // Relations
-
         public Sheet Sheet
         {
             get
@@ -136,7 +155,7 @@ namespace ExamSys.Database.dbEntities
             }
         }
 
-        public SheetResult()
+        public SheetMarks()
         {
         }
     }

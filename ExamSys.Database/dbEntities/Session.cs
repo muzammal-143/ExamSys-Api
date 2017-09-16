@@ -116,7 +116,7 @@ namespace ExamSys.Database.dbEntities
             }
         }
 
-        public Fachlty Fachlty
+        public Faculty Fachlty
         {
             get
             {
@@ -159,74 +159,7 @@ namespace ExamSys.Database.dbEntities
         }
 
     }
-    public class SessionDegreeCourse_ResultType : Properties
-    {
-
-        public int id { get; set; }
-        public int Semester { get; set; }
-
-        //Relations
-        [Key]
-        public SessionDegreeCourse SessionDegreeCourse { get; set; }
-        [Key]
-        public ResultType ResultType { get; set; }
-
-        public SessionDegreeCourse_ResultType()
-        {
-            new Properties();
-        }
-        public SessionDegreeCourse_ResultType(User user)
-        {
-            new Properties(user);
-        }
-
-    }
-
-    public class SessionDegreeStudent : Properties
-    {
-        public int Id { get; set; }
-        public int Semester { get; set; }
-
-        // Relations
-        [Key]
-        public Session Session { get; set; }
-
-        public SessionDegree SessionDegree
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public Student Student
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-        
-        
-
-        public SessionDegreeStudent()
-        {
-            Semester = 1;
-            new Properties();
-        }
-        public SessionDegreeStudent(User user)
-        {
-            Semester = 1;
-            new Properties(user);
-        }
-    }
-
+    
     public class SessionDepartment : Properties
     {
         public int Id { get; set; }
@@ -299,7 +232,21 @@ namespace ExamSys.Database.dbEntities
             {
             }
         }
+        public History()
+        {
+            new Properties();
+        }
+        public History(User user)
+        {
+            new Properties(user);
+        }
         
+    }
+
+    public enum SessionPart
+    {
+        SEMESTER,
+        SUMMER
     }
 
 

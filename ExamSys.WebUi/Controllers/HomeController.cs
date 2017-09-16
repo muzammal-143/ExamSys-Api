@@ -18,6 +18,7 @@ namespace ExamSys.WebUi.Controllers
             return View();
         }
 
+        [Authorize(Roles = "1")]
         public ActionResult StartPage() 
         {
             return View();

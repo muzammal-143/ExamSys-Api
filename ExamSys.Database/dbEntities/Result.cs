@@ -56,7 +56,7 @@ namespace ExamSys.Database.dbEntities
             }
         }
 
-        public Course Course
+        public ResultType ResultType
         {
             get
             {
@@ -67,7 +67,29 @@ namespace ExamSys.Database.dbEntities
             }
         }
 
-        public ResultType ResultType
+        public StudentCourse StudentCourse
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int SessionPartValue
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public SessionPart SessionPart
         {
             get
             {
@@ -80,8 +102,13 @@ namespace ExamSys.Database.dbEntities
 
         // Relations
 
-        public Result()
+        public History()
         {
+            new Properties();
+        }
+        public History(User user)
+        {
+            new Properties(user);
         }
     }
 

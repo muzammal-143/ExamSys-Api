@@ -7,14 +7,19 @@ using System.Text;
 
 namespace ExamSys.Database
 {
-    public class Activity : Properties
+    public class Notification : Properties
     {
-        public string Description { get; set; }
-
+        [Key]
         public int Id { get; set; }
 
-        [Key]
+        public string Table { get; set; }
+
+        public int TableId { get; set; }
+
         public string Title { get; set; }
+
+        public string Description { get; set; }
+        public bool Active { get; set; }
         public History()
         {
             new Properties();

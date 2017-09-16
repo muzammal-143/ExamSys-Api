@@ -22,16 +22,7 @@ namespace ExamSys.Database.dbEntities
         public string Email { get; set; }
         public bool Active { get; set; }
 
-        public UserStudent UserStudent
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+
 
         public User()
         {
@@ -119,11 +110,7 @@ namespace ExamSys.Database.dbEntities
         }
     }
 
-    public enum StudentAddCourse_Type
-    {
-        SEMESTER,
-        SUMMER,
-    }
+
 
 
 

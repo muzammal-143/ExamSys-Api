@@ -13,6 +13,14 @@ namespace ExamSys.Database.dbEntities
         [Key]
         public string Title { get; set; }
         public string Description { get; set; }
+        public History()
+        {
+            new Properties();
+        }
+        public History(User user)
+        {
+            new Properties(user);
+        }
     }
 
     public class ResultTypeRule : Properties
@@ -55,6 +63,14 @@ namespace ExamSys.Database.dbEntities
             set
             {
             }
+        }
+        public History()
+        {
+            new Properties();
+        }
+        public History(User user)
+        {
+            new Properties(user);
         }
     }
 }

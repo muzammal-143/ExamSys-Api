@@ -1,20 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Comment CommentText="Faculty Summer courses&#xD;&#xA;Discuss to sir&#xD;&#xA;">
-    <Position X="7.414" Y="11.748" Height="2.389" Width="2.992" />
-  </Comment>
   <Class Name="ExamSys.Database.dbEntities.Comment">
-    <Position X="1.5" Y="20.25" Width="1.5" />
+    <Position X="0.5" Y="23.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAABAgA=</HashCode>
+      <HashCode>AAACAAAAAAAAAEAAAAAAQAQAAAAAAAAAAAAAIAAAAAA=</HashCode>
       <FileName>dbEntities\Comment.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="CommentType" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.CommentAssign">
-    <Position X="2.5" Y="22.75" Width="1.5" />
+    <Position X="0.5" Y="26.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAEAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAgA=</HashCode>
       <FileName>dbEntities\Comment.cs</FileName>
@@ -24,45 +18,39 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.Course">
-    <Position X="26" Y="9" Width="1.5" />
+    <Position X="15.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>dbEntities\Course.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.DayTiming">
-    <Position X="26" Y="0.5" Width="1.5" />
+    <Position X="15.25" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>dbEntities\DayTiming.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.Degree">
-    <Position X="26" Y="3" Width="1.5" />
+    <Position X="18.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAAAAAAAgAEAAAAAAAAAAARAAIAAAAAAAAAAAAgA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAEAAAAAAAAAAARAAIAAAAAAAAAAEAgA=</HashCode>
       <FileName>dbEntities\Degree.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="SessionDegree" />
+      <Property Name="DegreeLevel" />
     </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.Department">
-    <Position X="32.25" Y="4.5" Width="1.5" />
+    <Position X="26" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAgAAAAgA=</HashCode>
       <FileName>dbEntities\Department.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ExamSys.Database.dbEntities.ExamSettings">
-    <Position X="1.75" Y="30.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>dbEntities\ExamSettings.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ExamSys.Database.dbEntities.Fachlty">
-    <Position X="18.25" Y="8.75" Width="1.5" />
+  <Class Name="ExamSys.Database.dbEntities.Faculty">
+    <Position X="8" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAADAAAAAAAAAAIAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
       <FileName>dbEntities\Fachlty.cs</FileName>
@@ -72,28 +60,22 @@
       <Property Name="User" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="ExamSys.Database.dbEntities.FacultyCourses">
-    <Position X="21" Y="8.25" Width="1.5" />
+  <Class Name="ExamSys.Database.dbEntities.FacultyCourse">
+    <Position X="10.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAYAAIIAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>dbEntities\Fachlty.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Course" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.File">
-    <Position X="5.25" Y="30.25" Width="1.5" />
+    <Position X="4" Y="31.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAgAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAAEAAAAAAQAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>dbEntities\File.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="FileType" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.GradeRule">
-    <Position X="4.5" Y="20.25" Width="1.5" />
+    <Position X="2.75" Y="23.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>dbEntities\Grades.cs</FileName>
@@ -103,30 +85,30 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.Grades">
-    <Position X="4.5" Y="23" Width="1.5" />
+    <Position X="2.75" Y="26.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAgAAAAAAAAAAAGAAgA=</HashCode>
       <FileName>dbEntities\Grades.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.History">
-    <Position X="7" Y="30.25" Width="1.5" />
+    <Position X="5.75" Y="31.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAEAAAAAAQAQAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>dbEntities\History.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.InvoiceType">
-    <Position X="10.75" Y="23.75" Width="1.5" />
+    <Position X="9" Y="27.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>dbEntities\Invoice.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.Invoice">
-    <Position X="10.75" Y="20.25" Width="1.5" />
+    <Position X="9" Y="23.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAgAEAAAAAAAAAAIAgAAAABAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAgAEAAAAAAAAAAIAgAAAAAAAAABAAAAAA=</HashCode>
       <FileName>dbEntities\Invoice.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -134,17 +116,14 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.Permission">
-    <Position X="9.5" Y="7.5" Width="1.5" />
+    <Position X="3.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>dbEntities\Permission.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Activity" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.Post">
-    <Position X="3.5" Y="30.25" Width="1.5" />
+    <Position X="2.25" Y="31.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>dbEntities\Post.cs</FileName>
@@ -153,7 +132,7 @@
   <Class Name="ExamSys.Database.dbEntities.Result">
     <Position X="28.5" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAAAAQAAAAQAAAIAAAAAQABAAAAAAAAAAAAAAAgA=</HashCode>
+      <HashCode>QAAgAAAAQAAAAQBAAIAAAAAQABAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>dbEntities\Result.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -161,26 +140,27 @@
       <Property Name="DayTiming" />
       <Property Name="Degree" />
       <Property Name="Session" />
-      <Property Name="Course" />
       <Property Name="ResultType" />
+      <Property Name="StudentCourse" />
+      <Property Name="SessionPart" />
     </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.ResultType">
-    <Position X="20.25" Y="13.75" Width="1.5" />
+    <Position X="14" Y="13.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>dbEntities\ResultType.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.Role">
-    <Position X="9.5" Y="3" Width="1.5" />
+    <Position X="3.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>dbEntities\Role.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.RolePermission">
-    <Position X="9.5" Y="5.25" Width="1.5" />
+    <Position X="3.25" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAgAAAAAAAAAAAAAgA=</HashCode>
       <FileName>dbEntities\Role.cs</FileName>
@@ -191,14 +171,14 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.Session">
-    <Position X="26.25" Y="6" Width="1.5" />
+    <Position X="19.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAEAAAAAAAAAAAAAAAAAgAAAAAAAAAgA=</HashCode>
       <FileName>dbEntities\Session.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.SessionDegree">
-    <Position X="30" Y="7" Width="1.5" />
+    <Position X="22.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgAAAAAAAAAQAAAAAAAAAQAAAAAAAgAAAAAAAAAgA=</HashCode>
       <FileName>dbEntities\Session.cs</FileName>
@@ -210,7 +190,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.SessionDegreeCourse">
-    <Position X="23.25" Y="10" Width="1.75" />
+    <Position X="25.25" Y="8" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAgAAAAAAAAAgAAoIAAAAAAABAAAAAEAAAAAAAAAgA=</HashCode>
       <FileName>dbEntities\Session.cs</FileName>
@@ -223,33 +203,18 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.Sheet">
-    <Position X="15.75" Y="13" Width="1.5" />
+    <Position X="9.5" Y="13" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIiAIAAAgAgAUAAAIAAAAAQABAAQACEAAAABACAAAA=</HashCode>
+      <HashCode>QAIiAIAAAkAgAUBAAAAAAAAQABAAQAAEAAAAAACAAgA=</HashCode>
       <FileName>dbEntities\Sheet.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="ResultType" />
-      <Property Name="Course" />
       <Property Name="Fachlty" />
-      <Property Name="Session" />
-      <Property Name="Degree" />
       <Property Name="DayTiming" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="ExamSys.Database.dbEntities.SheetResult">
-    <Position X="17.5" Y="17" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAQAAAAAEAAIAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
-      <FileName>dbEntities\Sheet.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Sheet" />
-      <Property Name="Student" />
-    </ShowAsAssociation>
-  </Class>
   <Class Name="ExamSys.Database.dbEntities.SheetApprove">
-    <Position X="15.5" Y="17" Width="1.5" />
+    <Position X="9.5" Y="19" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>dbEntities\Sheet.cs</FileName>
@@ -259,29 +224,28 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.Student">
-    <Position X="20.25" Y="5.25" Width="1.5" />
+    <Position X="12.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAApAAAEAAAAAAAAAAACAAAQAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <HashCode>AAAoAAAEAAAAAAAAAAACAAAQAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>dbEntities\Student.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="User" />
       <Property Name="DayTiming" />
       <Property Name="Degree" />
       <Property Name="StudentStatus" />
     </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.Status">
-    <Position X="11" Y="30.25" Width="1.5" />
+    <Position X="7.5" Y="31.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>dbEntities\Student.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.StudentCourse">
-    <Position X="22.5" Y="5.75" Width="2" />
+    <Position X="14.75" Y="8.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAQAAAAwAAoIAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAQAAAAwAAoIAAAAAAAAAAAAAEAAAAAAAAAIA=</HashCode>
       <FileName>dbEntities\Student.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -290,42 +254,32 @@
       <Property Name="ResultTypeRule" />
       <Property Name="Session" />
       <Property Name="Fachlty" />
+      <Property Name="StudentCourse_Status" />
     </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.UniqueRollNo">
-    <Position X="14.75" Y="30.25" Width="1.5" />
+    <Position X="2.5" Y="35" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAQAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>dbEntities\Student.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.UniqueRegistrationNo">
-    <Position X="12.75" Y="30.25" Width="1.75" />
+    <Position X="0.5" Y="35" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAQAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>dbEntities\Student.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ExamSys.Database.dbEntities.StudentAddCourse">
-    <Position X="12.5" Y="10" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAQAAAAAAAgA=</HashCode>
-      <FileName>dbEntities\StudentAddCourse.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="StudentCourse" />
-      <Property Name="Type" />
-    </ShowAsAssociation>
-  </Class>
   <Class Name="ExamSys.Database.dbEntities.TaskStatus">
-    <Position X="8.5" Y="23.25" Width="1.5" />
+    <Position X="6.75" Y="26.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>dbEntities\Task.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.Task">
-    <Position X="7.5" Y="20.25" Width="1.5" />
+    <Position X="5.75" Y="23.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAgAEAAAAAAAAAAAAAAAAAgAAAAAAAAAiA=</HashCode>
       <FileName>dbEntities\Task.cs</FileName>
@@ -336,21 +290,21 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.TaskAssign">
-    <Position X="6.5" Y="23.25" Width="1.5" />
+    <Position X="4.75" Y="26.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAEAAAAAAAAAAAAAAAAAAAAAAAgAEAAAAAAAgA=</HashCode>
       <FileName>dbEntities\Task.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.User">
-    <Position X="15" Y="5.25" Width="1.5" />
+    <Position X="8.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAACAAAACAAAAAAAQAABAAAAAiAQAAAAAAAgg=</HashCode>
+      <HashCode>AAAAAEAAACAAAACAAAAAAAAAABAAAAAiAQAAAAAAAgg=</HashCode>
       <FileName>dbEntities\User.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.UserRole">
-    <Position X="12.25" Y="4" Width="1.5" />
+    <Position X="6" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAADAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>dbEntities\User.cs</FileName>
@@ -361,7 +315,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.UserPermission">
-    <Position X="12.25" Y="6" Width="1.5" />
+    <Position X="6" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAAAAAAAAAAAAAAAAABAgAAAAAAAAAAAAAgA=</HashCode>
       <FileName>dbEntities\User.cs</FileName>
@@ -372,7 +326,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.SessionDepartment">
-    <Position X="29.25" Y="4.5" Width="1.75" />
+    <Position X="22.25" Y="4.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAQAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>dbEntities\Session.cs</FileName>
@@ -383,7 +337,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.SessionDepartmentDegree">
-    <Position X="29.25" Y="2.75" Width="2.5" />
+    <Position X="23" Y="2.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AABiAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>dbEntities\Session.cs</FileName>
@@ -395,16 +349,16 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.ResultTypeRule">
-    <Position X="25.75" Y="13.25" Width="1.5" />
+    <Position X="19.5" Y="13.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAEAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>dbEntities\ResultType.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.StudentSession">
-    <Position X="21.75" Y="4" Width="1.5" />
+    <Position X="14.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAQAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAQAAAAQAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>dbEntities\Student.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -413,7 +367,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.ResultTypeAndRule">
-    <Position X="23" Y="14" Width="1.5" />
+    <Position X="16.5" Y="14" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAKAAAAAAAAAgAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>dbEntities\ResultType.cs</FileName>
@@ -424,14 +378,14 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ExamSys.Database.Activity">
-    <Position X="7" Y="6.5" Width="1.5" />
+    <Position X="0.75" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>dbEntities\Activity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExamSys.Database.dbEntities.Registration">
-    <Position X="17.75" Y="5.25" Width="1.5" />
+    <Position X="9.75" Y="9.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAQAAAAAAAAAAAAAAAAAAAAAAgAAAAACAAAgA=</HashCode>
       <FileName>dbEntities\Student.cs</FileName>
@@ -441,46 +395,49 @@
       <Property Name="Student" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="ExamSys.Database.ResitStudent">
-    <Position X="12.5" Y="12.75" Width="1.75" />
+  <Class Name="ExamSys.Database.dbEntities.SheetMarks">
+    <Position X="11.5" Y="17" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ResitStudent.cs</FileName>
+      <HashCode>AAAAAAAAQAAAAAEAAIAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>dbEntities\Sheet.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Sheet" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ExamSys.Database.dbEntities.DegreeLevel">
+    <Position X="18.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>dbEntities\Degree.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Enum Name="ExamSys.Database.dbEntities.CommentType">
-    <Position X="0.5" Y="22.75" Width="1.5" />
+  <Class Name="ExamSys.Database.Notification">
+    <Position X="0.5" Y="31.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABIAAAAAAAAAABAAIAAAAAAAQAAAAcAAAAAAAAAAAA=</HashCode>
-      <FileName>dbEntities\Comment.cs</FileName>
+      <HashCode>AAACAAAAAAAgAEAAAAAAQAQAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>dbEntities\Notification.cs</FileName>
     </TypeIdentifier>
-  </Enum>
-  <Enum Name="ExamSys.Database.dbEntities.FileType">
-    <Position X="5.25" Y="32.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
-      <FileName>dbEntities\File.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
+  </Class>
   <Enum Name="ExamSys.Database.dbEntities.StudentCourse_Status">
-    <Position X="9" Y="30.25" Width="1.75" />
+    <Position X="16.25" Y="7" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAABBAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
       <FileName>dbEntities\Student.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="ExamSys.Database.dbEntities.StudentStatus">
-    <Position X="19" Y="3.75" Width="1.5" />
+    <Position X="12" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAIAAAAgA=</HashCode>
       <FileName>dbEntities\Student.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="ExamSys.Database.dbEntities.StudentAddCourse_Type">
-    <Position X="12" Y="8.25" Width="1.5" />
+  <Enum Name="ExamSys.Database.dbEntities.SessionPart">
+    <Position X="12.75" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>dbEntities\User.cs</FileName>
+      <FileName>dbEntities\Session.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

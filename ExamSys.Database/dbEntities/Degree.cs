@@ -31,7 +31,9 @@ namespace ExamSys.Database.dbEntities
             }
         }
 
-        public DepartmentDegree DepartmentDegree
+        
+
+        public DegreeLevel DegreeLevel
         {
             get
             {
@@ -47,6 +49,24 @@ namespace ExamSys.Database.dbEntities
             new Properties();
         }
         public Degree(User user)
+        {
+            new Properties(user);
+        }
+    }
+
+    public class DegreeLevel : Properties
+    {
+        [Key]
+        public string Title { get; set; }
+
+        public string Description { get; set; }
+
+        public int id { get; set; }
+        public History()
+        {
+            new Properties();
+        }
+        public History(User user)
         {
             new Properties(user);
         }

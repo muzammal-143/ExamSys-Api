@@ -8,39 +8,23 @@ using System.Threading.Tasks;
 
 namespace ExamSys.Database.dbEntities
 {
-    public enum CommentType
-    {
-        COMMENT,
-        COURSE,
-        HISTORY,
-        INVOICE,
-        POST,
-        RESULT,
-        SHEET,
-        TASK,
-        USER
-
-    }
+    
     public class Comment : Properties
     {
-        public int id { get; set; }
+        [Key]
+        public int Id { get; set; }
+        public string Title { get; set; }
         public string Message { get; set; }
-        public int TargetId { get; set; }
+        public string Table { get; set; }
+        public int TableId { get; set; }
 
-        public CommentType CommentType
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-        
-        public Comment()
+        public History()
         {
             new Properties();
+        }
+        public History(User user)
+        {
+            new Properties(user);
         }
     }
     public class CommentAssign
@@ -59,6 +43,14 @@ namespace ExamSys.Database.dbEntities
             set
             {
             }
+        }
+        public History()
+        {
+            new Properties();
+        }
+        public History(User user)
+        {
+            new Properties(user);
         }
     }
 }

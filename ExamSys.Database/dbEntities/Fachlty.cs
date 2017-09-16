@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ExamSys.Database.dbEntities
 {
-    public class Fachlty : Properties
+    public class Faculty : Properties
     {
 
         public int Id { get; set; }
 
-        public FacultyCourses FacultyCourses
+        public FacultyCourse FacultyCourses
         {
             get
             {
@@ -35,23 +35,23 @@ namespace ExamSys.Database.dbEntities
 
         public bool Active { get; set; }
 
-        public Fachlty()
+        public Faculty()
         {
             new Properties();
         }
-        public Fachlty(User user)
+        public Faculty(User user)
         {
             new Properties(user);
         }
     }
 
-    public class FacultyCourses : Properties
+    public class FacultyCourse : Properties
     {
         public int Id { get; set; }
         public int Semester { get; set; }
 
         //Relation
-        public Fachlty Faculty { get; set; }
+        public Faculty Faculty { get; set; }
         public Session Session { get; set; }
         public Department Department { get; set; }
 
@@ -67,11 +67,11 @@ namespace ExamSys.Database.dbEntities
         }
         
 
-        public FacultyCourses()
+        public FacultyCourse()
         {
             new Properties();
         }
-        public FacultyCourses(User user)
+        public FacultyCourse(User user)
         {
             new Properties(user);
         }

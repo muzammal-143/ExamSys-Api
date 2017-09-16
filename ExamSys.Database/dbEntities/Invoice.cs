@@ -31,7 +31,7 @@ namespace ExamSys.Database.dbEntities
         public double Rs { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public bool Expired { get; set; }
+        public bool Valid { get; set; }
 
         public InvoiceType InvoiceType
         {
@@ -46,12 +46,12 @@ namespace ExamSys.Database.dbEntities
         
         public Invoice()
         {
-            Expired = false;
+            Valid = true;
             new Properties();
         }
         public Invoice(User user)
         {
-            Expired = false;
+            Valid = true;
             new Properties(user);
         }
         

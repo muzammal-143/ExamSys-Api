@@ -19,8 +19,8 @@ namespace ExamSys.Database.dbEntities
         [Display(Name = "Description")]
         public string Description { get; set; }
 
-        [Display(Name = "User")]
-        public User User { get; set; }
+        public string Table { get; set; }
+        public int TableId { get; set; }
         
         public History()
         {

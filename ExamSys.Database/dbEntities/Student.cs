@@ -18,17 +18,6 @@ namespace ExamSys.Database.dbEntities
         //Relations
         public Status Status { get; set; }
 
-        public User User
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
         public DayTiming DayTiming
         {
             get
@@ -75,22 +64,6 @@ namespace ExamSys.Database.dbEntities
     }
 
 
-    public class Status : Properties
-    {
-        public int id { get; set; }
-        [Key]
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public Status()
-        {
-            new Properties();
-        }
-        public Status(User user)
-        {
-            new Properties(user);
-        }
-    }
-    
     public enum StudentCourse_Status 
     {
         ACTIVE,
@@ -149,7 +122,7 @@ namespace ExamSys.Database.dbEntities
             }
         }
 
-        public Fachlty Fachlty
+        public Faculty Fachlty
         {
             get
             {
@@ -158,6 +131,25 @@ namespace ExamSys.Database.dbEntities
             set
             {
             }
+        }
+
+        public StudentCourse_Status StudentCourse_Status
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+        public History()
+        {
+            new Properties();
+        }
+        public History(User user)
+        {
+            new Properties(user);
         }
     }
 
@@ -259,6 +251,14 @@ namespace ExamSys.Database.dbEntities
             {
             }
         }
+        public History()
+        {
+            new Properties();
+        }
+        public History(User user)
+        {
+            new Properties(user);
+        }
     }
 
     public enum StudentStatus
@@ -270,17 +270,10 @@ namespace ExamSys.Database.dbEntities
 
     public class StudentSession
     {
-        public int Id
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public int Id { get; set; }
+        public int Semester { get; set; }
 
+        [Key]
         public Student Student
         {
             get
@@ -292,6 +285,7 @@ namespace ExamSys.Database.dbEntities
             }
         }
 
+        [Key]
         public Session Session
         {
             get
@@ -301,6 +295,14 @@ namespace ExamSys.Database.dbEntities
             set
             {
             }
+        }
+        public History()
+        {
+            new Properties();
+        }
+        public History(User user)
+        {
+            new Properties(user);
         }
     }
 
@@ -343,6 +345,121 @@ namespace ExamSys.Database.dbEntities
             {
             }
         }
+        public History()
+        {
+            new Properties();
+        }
+        public History(User user)
+        {
+            new Properties(user);
+        }
     }
+
+        public class StudentAddCourse : Properties
+    {
+        public int id { get; set; }
+
+        public StudentCourse StudentCourse
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int SessionPartValue
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public SessionPart SessionPart
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        //Relations
+
+        public StudentAddCourse()
+        {
+            new Properties();
+        }
+        public StudentAddCourse(User user)
+        {
+            new Properties(user);
+        }
+
+    }
+    public class StudentResit
+    {
+        public ExamSys.Database.dbEntities.StudentCourse StudentCourse
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int id { get; set; }
+
+        public ExamSys.Database.dbEntities.SessionPart SessionPart
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int SessionPartValue
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public ExamSys.Database.dbEntities.ResultType ResultType
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+        public StudentAddCourse()
+        {
+            new Properties();
+        }
+        public StudentAddCourse(User user)
+        {
+            new Properties(user);
+        }
+    }
+
 
 }
