@@ -20,11 +20,11 @@ namespace ExamSys.Database
 
         public string Description { get; set; }
         public bool Active { get; set; }
-        public History()
+        public Notification()
         {
             new Properties();
         }
-        public History(User user)
+        public Notification(User user)
         {
             new Properties(user);
         }

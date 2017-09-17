@@ -20,29 +20,8 @@ namespace ExamSys.Database.dbEntities
 
         
 
-        public SessionDegree SessionDegree
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        
-
-        public DegreeLevel DegreeLevel
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public SessionDegree SessionDegree{ get; set; }
+        public DegreeLevel DegreeLevel{ get; set; }
     
         public Degree()
         {
@@ -62,11 +41,11 @@ namespace ExamSys.Database.dbEntities
         public string Description { get; set; }
 
         public int id { get; set; }
-        public History()
+        public DegreeLevel()
         {
             new Properties();
         }
-        public History(User user)
+        public DegreeLevel(User user)
         {
             new Properties(user);
         }

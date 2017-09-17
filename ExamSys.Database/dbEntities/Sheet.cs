@@ -24,91 +24,19 @@ namespace ExamSys.Database.dbEntities
         public bool Submited { get; set; }
         public bool approved { get; set; } // Summer or Semester // if summer then StateAct will be year else Semester#
 
-        public ResultType ResultType
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-        public Faculty Fachlty
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-        public Session Session
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-        public Degree Degree
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-        public DayTiming DayTiming
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public ResultType ResultType { get; set; }
+        public Faculty Fachlty { get; set; }
+        public Session Session { get; set; }
+        public Degree Degree { get; set; }
+        public DayTiming DayTiming { get; set; }
 
         public bool Resit { get; set; }
 
-        public StudentCourse StudentCourse
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public StudentCourse StudentCourse { get; set; }
 
-        public SessionPart SessionPart
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public SessionPart SessionPart { get; set; }
 
-        public int SessionPartValue
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public int SessionPartValue { get; set; }
 
         public Sheet()
         {
@@ -127,36 +55,23 @@ namespace ExamSys.Database.dbEntities
             new Properties(user);
         }
     }
-    public class SheetMarks
+    public class SheetMarks : Properties
     {
         public int id { get; set; }
         public double Obtain { get; set; }
 
         // Relations
-        public Sheet Sheet
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Sheet Sheet { get; set; }
 
-        public Student Student
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Student Student { get; set; }
 
         public SheetMarks()
         {
+            new Properties();
+        }
+        public SheetMarks(User user)
+        {
+            new Properties(user);
         }
     }
     public class SheetApprove : Properties
@@ -165,16 +80,7 @@ namespace ExamSys.Database.dbEntities
         [Key]
         public User User { get; set; }
 
-        public Sheet Sheet
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Sheet Sheet { get; set; }
     
         public SheetApprove()
         {

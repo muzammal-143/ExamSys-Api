@@ -33,16 +33,7 @@ namespace ExamSys.Database.dbEntities
         public string Description { get; set; }
         public bool Valid { get; set; }
 
-        public InvoiceType InvoiceType
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public InvoiceType InvoiceType { get; set; }
         
         public Invoice()
         {

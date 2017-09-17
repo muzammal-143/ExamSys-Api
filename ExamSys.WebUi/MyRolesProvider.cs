@@ -9,7 +9,7 @@ namespace ExamSys.WebUi
 {
     public class MyRolesProvider:RoleProvider
     {
-        private ExamDB DB = new ExamDB();
+        private ExamDB db = new ExamDB();
         public override void AddUsersToRoles(string[] usernames, string[] roleNames)
         {
             throw new NotImplementedException();
@@ -55,16 +55,17 @@ namespace ExamSys.WebUi
             }
 
 
-            string[] Roles = new string[1];
-            var admin   = DB.Faculties.SingleOrDefault(m => m.UserName == username);
-            var student = DB.Students.SingleOrDefault( m => m.Roll_No  == username);
+            string[] Roles = new string[1000];
+            var user = db.User.SingleOrDefault(m => m.UserName == username);
+
+            var student = db.Students.SingleOrDefault( m => m.Roll_No  == username);
             if (admin != null)
             {
-                Roles[0] = DB.Designations.Find(admin.Designation).Title;
+                Roles[0] = db.Designations.Find(admin.Designation).Title;
             }
             else if (student != null)
             {
-                Roles[0] = DB.Designations.Find(student.Designation).Title;
+                Roles[0] = db.Designations.Find(student.Designation).Title;
             }
             else
             {

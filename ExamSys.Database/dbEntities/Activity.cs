@@ -15,11 +15,11 @@ namespace ExamSys.Database
 
         [Key]
         public string Title { get; set; }
-        public History()
+        public Activity()
         {
             new Properties();
         }
-        public History(User user)
+        public Activity(User user)
         {
             new Properties(user);
         }

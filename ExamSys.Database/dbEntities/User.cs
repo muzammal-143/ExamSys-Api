@@ -41,27 +41,9 @@ namespace ExamSys.Database.dbEntities
     {
         public int Id { get; set; }
 
-        public Role Role
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Role Role { get; set; }
 
-        public User User
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public User User { get; set; }
     
         public UserRole()
         {
@@ -78,27 +60,9 @@ namespace ExamSys.Database.dbEntities
         public int id { get; set; }
         public DateTime expire_at { get; set; }
 
-        public Permission Permission
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Permission Permission { get; set; }
 
-        public User User
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public User User { get; set; }
     
         public UserPermission()
         {

@@ -13,16 +13,7 @@ namespace ExamSys.Database.dbEntities
         public string Title { get; set; }
         public string Description { get; set; }
 
-        public Grades Grades
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Grades Grades { get; set; }
     
         public GradeRule()
         {

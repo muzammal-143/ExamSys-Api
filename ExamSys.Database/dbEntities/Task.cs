@@ -31,27 +31,7 @@ namespace ExamSys.Database.dbEntities
         public string Description { get; set; }
         public bool       Active { get; set; }
 
-        public TaskAssign TaskAssign
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public TaskStatus TaskStatus
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public TaskStatus TaskStatus { get; set; }
 
         public Task()
         {

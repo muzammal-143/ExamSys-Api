@@ -13,11 +13,11 @@ namespace ExamSys.Database.dbEntities
         [Key]
         public string Title { get; set; }
         public string Description { get; set; }
-        public History()
+        public ResultType()
         {
             new Properties();
         }
-        public History(User user)
+        public ResultType(User user)
         {
             new Properties(user);
         }
@@ -39,36 +39,18 @@ namespace ExamSys.Database.dbEntities
         }
     }
 
-    public class ResultTypeAndRule
+    public class ResultTypeAndRule : Properties
     {
         public int Id { get; set; }
         public decimal TypeTotal { get; set; }
-        public ResultType ResultType
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public ResultType ResultType{ get; set; }
 
-        public ResultTypeRule ResultTypeRule
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-        public History()
+        public ResultTypeRule ResultTypeRule{ get; set; }
+        public ResultTypeAndRule()
         {
             new Properties();
         }
-        public History(User user)
+        public ResultTypeAndRule(User user)
         {
             new Properties(user);
         }

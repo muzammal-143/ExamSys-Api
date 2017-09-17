@@ -36,38 +36,11 @@ namespace ExamSys.Database.dbEntities
 
         // Relatins
 
-        public DayTiming DayTiming
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public DayTiming DayTiming{ get; set; }
 
-        public Session Session
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Session Session{ get; set; }
 
-        public Degree Degree
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Degree Degree{ get; set; }
 
         public SessionDegree()
         {
@@ -94,60 +67,15 @@ namespace ExamSys.Database.dbEntities
 
         public int CH { get; set; }
 
-        public SessionDegreeCourse_ResultType SessionDegreeCourse_ResultType
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        
 
-        public Course Course
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Course Course{ get; set; }
 
-        public Faculty Fachlty
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Faculty Fachlty{ get; set; }
 
-        public SessionDegree SessionDegree
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public SessionDegree SessionDegree{ get; set; }
 
-        public ResultTypeRule ResultTypeRule
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public ResultTypeRule ResultTypeRule{ get; set; }
 
         public SessionDegreeCourse()
         {
@@ -164,27 +92,9 @@ namespace ExamSys.Database.dbEntities
     {
         public int Id { get; set; }
 
-        public Session Session
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Session Session{ get; set; }
 
-        public Department Department
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Department Department{ get; set; }
     
         public SessionDepartment()
         {
@@ -200,43 +110,16 @@ namespace ExamSys.Database.dbEntities
     {
         public int Id { get; set; }
 
-        public Degree Degree
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Degree Degree{ get; set; }
 
-        public SessionDepartment SessionDepartment
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public SessionDepartment SessionDepartment{ get; set; }
 
-        public DayTiming DayTiming
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-        public History()
+        public DayTiming DayTiming{ get; set; }
+        public SessionDepartmentDegree()
         {
             new Properties();
         }
-        public History(User user)
+        public SessionDepartmentDegree(User user)
         {
             new Properties(user);
         }

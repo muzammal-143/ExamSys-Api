@@ -11,27 +11,9 @@ namespace ExamSys.Database.dbEntities
 
         public int Id { get; set; }
 
-        public FacultyCourse FacultyCourses
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public FacultyCourse FacultyCourses { get; set; }
 
-        public User User
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public User User { get; set; }
 
         public bool Active { get; set; }
 
@@ -54,17 +36,10 @@ namespace ExamSys.Database.dbEntities
         public Faculty Faculty { get; set; }
         public Session Session { get; set; }
         public Department Department { get; set; }
+        public SessionPart SessionPart { get; set; }
+        public int SessionPartValue { get; set; }
 
-        public Course Course
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Course Course { get; set; }
         
 
         public FacultyCourse()

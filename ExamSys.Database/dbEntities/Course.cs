@@ -15,11 +15,11 @@ namespace ExamSys.Database.dbEntities
         public string   Code        { get; set; }
         public string   Name        { get; set; }
         
-        public History()
+        public Course()
         {
             new Properties();
         }
-        public History(User user)
+        public Course(User user)
         {
             new Properties(user);
         }

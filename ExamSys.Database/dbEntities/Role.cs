@@ -29,27 +29,9 @@ namespace ExamSys.Database.dbEntities
     {
         public int id { get; set; }
 
-        public Role Role
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Role Role { get; set; }
 
-        public Permission Permission
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Permission Permission { get; set; }
     
         public RolePermission()
         {

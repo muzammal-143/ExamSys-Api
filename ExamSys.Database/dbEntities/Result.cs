@@ -12,101 +12,29 @@ namespace ExamSys.Database.dbEntities
         public int           id          { get; set; }
         public double        Obtain      { get; set; }
 
-        public Student Student
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Student Student{ get; set; }
 
-        public DayTiming DayTiming
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public DayTiming DayTiming{ get; set; }
 
-        public Degree Degree
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Degree Degree{ get; set; }
 
-        public Session Session
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Session Session{ get; set; }
 
-        public ResultType ResultType
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public ResultType ResultType{ get; set; }
 
-        public StudentCourse StudentCourse
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public StudentCourse StudentCourse{ get; set; }
 
-        public int SessionPartValue
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public int SessionPartValue{ get; set; }
 
-        public SessionPart SessionPart
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public SessionPart SessionPart{ get; set; }
 
         // Relations
 
-        public History()
+        public Result()
         {
             new Properties();
         }
-        public History(User user)
+        public Result(User user)
         {
             new Properties(user);
         }

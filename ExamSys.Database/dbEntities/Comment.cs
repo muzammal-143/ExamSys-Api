@@ -18,11 +18,11 @@ namespace ExamSys.Database.dbEntities
         public string Table { get; set; }
         public int TableId { get; set; }
 
-        public History()
+        public Comment()
         {
             new Properties();
         }
-        public History(User user)
+        public Comment(User user)
         {
             new Properties(user);
         }
@@ -34,21 +34,12 @@ namespace ExamSys.Database.dbEntities
         public User User { get; set; }
         public bool Active { get; set; }
 
-        public Comment Comment
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-        public History()
+        public Comment Comment{ get; set; }
+        public CommentAssign()
         {
             new Properties();
         }
-        public History(User user)
+        public CommentAssign(User user)
         {
             new Properties(user);
         }

@@ -90,7 +90,7 @@
     <Compile Include="dbEntities\DayTiming.cs" />
     <Compile Include="dbEntities\Degree.cs" />
     <Compile Include="dbEntities\Department.cs" />
-    <Compile Include="dbEntities\Fachlty.cs" />
+    <Compile Include="dbEntities\Faculty.cs" />
     <Compile Include="dbEntities\File.cs" />
     <Compile Include="dbEntities\Invoice.cs" />
     <Compile Include="dbEntities\Notification.cs" />
