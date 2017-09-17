@@ -30,7 +30,7 @@ namespace ExamSys.Database.Seeds
                 },
             };
             foreach (var item in DayTiming)
-                db.DayTiming.AddOrUpdate(item);
+                db.DayTime.AddOrUpdate(item);
 
             db.SaveChanges();
 

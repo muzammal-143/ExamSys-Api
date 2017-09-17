@@ -149,6 +149,7 @@ namespace ExamSys.WebUi
 
         public override bool ValidateUser(string username, string password)
         {
+            /*
             var admin = DB.Faculties
                 .SingleOrDefault(
                                         m => m.UserName == username && 
@@ -163,6 +164,7 @@ namespace ExamSys.WebUi
                                  );
             if (admin   != null) return true;
             if (student != null) return true;
+             */ 
             return true;
             
         }

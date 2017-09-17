@@ -18,31 +18,7 @@ namespace ExamSys.Database.Seeds
             context.Student.AddOrUpdate(
                 new Student()
                 {
-                    id = 1,                          
-                    Semester = 1,
-                    Session = 2016,
-                    RegistrationNO = "94384711",
-                    Designation = 5,
-                    Gender = "Male",
-                    Picture = "",
-                    Status = 1,
-                    Department = 1,
-                    Comment = "",
-                },
-                new Student()
-                {
-                    id = 2,
-                    Semester = 1,
-                    Session = 2016,
-                    RegistrationNo = "94344711",
-                    Designation = 5,
-                    Gender = "Male",
-                    Picture = "",
-                    Status = 1,
-                    Department = 1,
-                    Comment = "",
-                    created_at = DateTime.Now ,
-                    edited_at = DateTime.Now
+                    
                 }
             );
 

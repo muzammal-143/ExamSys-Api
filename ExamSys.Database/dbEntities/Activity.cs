@@ -1,4 +1,5 @@
 ﻿using ExamSys.Database.dbEntities;
+using ExamSys.Database.interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -23,7 +24,6 @@ namespace ExamSys.Database
         {
             new Properties(user);
         }
-
 
     }
 }

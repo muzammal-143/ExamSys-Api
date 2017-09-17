@@ -18,23 +18,7 @@ namespace ExamSys.Database.Seeds
             {
                 new Department()
                 {
-                    id = 1,
-                    Degree = db.Degree.Find(1),
-                    DayTiming = db.DayTiming.Find(1),
-                    Description = "Computer Science",
-                    Title = "BSCS",
-                    TotalSemesters =  8,
-                    Color = "GREEN"
-                },
-                new Department()
-                {
-                    id = 2,
-                    Degree = db.Degree.Find(1),
-                    DayTiming = db.DayTiming.Find(2),
-                    Description = "Business Administration",
-                    Title = "BBA",
-                    TotalSemesters =  8,
-                    Color = "RED",
+                   
                 },
             };
             foreach (var item in Departments) db.Department.Add(item);

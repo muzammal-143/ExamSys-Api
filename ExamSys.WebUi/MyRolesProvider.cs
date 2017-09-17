@@ -57,7 +57,7 @@ namespace ExamSys.WebUi
 
             string[] Roles = new string[1000];
             var user = db.User.SingleOrDefault(m => m.UserName == username);
-
+            /*
             var student = db.Students.SingleOrDefault( m => m.Roll_No  == username);
             if (admin != null)
             {
@@ -71,6 +71,7 @@ namespace ExamSys.WebUi
             {
                 return null;
             }
+             */ 
             return Roles;
         }
 

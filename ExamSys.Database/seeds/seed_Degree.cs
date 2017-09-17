@@ -35,7 +35,7 @@ namespace ExamSys.Database.Seeds
                 },
             };
             foreach (var item in Degrees)
-                db.Degrees.Add(item);
+                db.Degree.Add(item);
 
             db.SaveChanges();
 

@@ -26,11 +26,11 @@ namespace ExamSys.Database.dbEntities
     }
     public class Grade : Properties
     {
-        public int      id          { get; set; }
+        public int      Id          { get; set; }
         public double   Lower_Range { get; set; }
         public double   Upper_Range { get; set; }
         public double   Points      { get; set; }
-        public string Grade { get; set; }
+        public string grade { get; set; }
 
         // Relation
         public GradeRule GradeRule { get; set; }

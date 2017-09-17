@@ -18,90 +18,90 @@ namespace ExamSys.Database.Seeds
             {
                 new Grade()
                 {
-                    id = 1,
+                    Id = 1,
                     Lower_Range = 0,
                     Upper_Range = 49,
                     Points = 0,
-                    Grade = "F",
+                    grade = "F",
                 },
                 new Grade()
                 {
-                    id = 2,
+                    Id = 2,
                     Lower_Range = 50,
                     Upper_Range = 52,
                     Points = 1.0,
-                    Grade = "D"
+                    grade = "D"
                 },
                 new Grade()
                 {
-                    id = 3,
+                    Id = 3,
                     Lower_Range = 53,
                     Upper_Range = 56,
                     Points = 1.33,
-                    Grade = "D+"
+                    grade = "D+"
                 },
                 new Grade()
                 {
-                    id = 4,
+                    Id = 4,
                     Lower_Range = 57,
                     Upper_Range = 59,
                     Points = 1.66,
-                    Grade = "C-"
+                    grade = "C-"
                 },
                 new Grade()
                 {
-                    id = 5,
+                    Id = 5,
                     Lower_Range = 60,
                     Upper_Range = 63,
                     Points = 2.0,
-                    Grade = "C"
+                    grade = "C"
                 },
                 new Grade()
                 {
-                    id = 6,
+                    Id = 6,
                     Lower_Range = 63,
                     Upper_Range = 66,
                     Points = 2.33,
-                    Grade = "C+"
+                    grade = "C+"
                 },
                 new Grade()
                 {
-                    id = 7,
+                    Id = 7,
                     Lower_Range = 67,
                     Upper_Range = 69,
                     Points = 2.66,
-                    Grade = "B-"
+                    grade = "B-"
                 },
                 new Grade()
                 {
-                    id = 8,
+                    Id = 8,
                     Lower_Range = 70,
                     Upper_Range = 74,
                     Points = 3.00,
-                    Grade = "B"
+                    grade = "B"
                 },
                 new Grade()
                 {
-                    id = 9,
+                    Id = 9,
                     Lower_Range = 75,
                     Upper_Range = 79,
                     Points = 3.33,
-                    Grade = "B+"
+                    grade = "B+"
                 },
                 new Grade()
                 {
-                    id = 10,
+                    Id = 10,
                     Lower_Range = 80,
                     Upper_Range = 84,
                     Points = 3.66,
-                    Grade = "A"
+                    grade = "A"
                 },new Grade()
                 {
-                    id = 11,
+                    Id = 11,
                     Lower_Range = 85,
                     Upper_Range = 100,
                     Points = 4.0,
-                    Grade = "A+"
+                    grade = "A+"
                 },
             };
             foreach (var item in Grades)

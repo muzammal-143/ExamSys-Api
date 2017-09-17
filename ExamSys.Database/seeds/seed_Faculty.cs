@@ -12,47 +12,15 @@ namespace ExamSys.Database.Seeds
     {
         public static void seed(ExamDB context)
         {
-            
-            IList<Designations> Designations = new List<Designations>()
+
+            IList<Faculty> Faculties = new List<Faculty>()
             {
-                new Designations()
+                new Faculty()
                 {
-                    id =1,
-                    Title = "Admin",
-                    created_at = DateTime.Now ,
-                    edited_at = DateTime.Now
-                },
-                new Designations()
-                {
-                    id =2,
-                    Title = "Lecturer",
-                    created_at = DateTime.Now,
-                    edited_at = DateTime.Now
-                },
-                new Designations()
-                {
-                    id =3,
-                    Title = "Lab_Incharge",
-                    created_at = DateTime.Now,
-                    edited_at = DateTime.Now
-                },
-                new Designations()
-                {
-                    id =4,
-                    Title = "Worker",
-                    created_at = DateTime.Now,
-                    edited_at = DateTime.Now
-                },
-                new Designations()
-                {
-                    id =5,
-                    Title = "Student",
-                    created_at = DateTime.Now,
-                    edited_at = DateTime.Now
                 },
             };
-            foreach (var item in Designations)
-                context.Designations.Add(item);
+            foreach (var item in Faculties)
+                context.Faculty.Add(item);
 
             context.SaveChanges();
 

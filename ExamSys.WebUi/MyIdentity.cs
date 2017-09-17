@@ -11,6 +11,7 @@ namespace ExamSys.WebUi
     {
 
         public IIdentity Identity { get; set; }
+        /*
         public LoginView User { get; set; }
 
 
@@ -19,7 +20,7 @@ namespace ExamSys.WebUi
             Identity = new GenericIdentity(user.UserName);
             User = user;
         }
-
+        */
         public string AuthenticationType
         {
 

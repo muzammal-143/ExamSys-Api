@@ -12,14 +12,15 @@ namespace ExamSys.WebUi.Controllers
         ExamDB db = new ExamDB();
         public ActionResult Index()
         {
-            //var s = db.Comment.ToList();
+            
+            var s = db.Comment.ToList();
             ViewBag.Title = "Home Page";
 
             return View();
         }
 
         // Activity = 1
-        [Authorize(Roles = "0")]
+        //[Authorize(Roles = "0")]
         public ActionResult StartPage() 
         {
             return View();

@@ -16,7 +16,8 @@ namespace ExamSys.Database.dbEntities
 
     public class User : Properties
     {
-        public int id { get; set; }
+        //[ForeignKey("Id")]
+        public int Id { get; set; }
         [Key]
         public string UserName { get; set; }
         public string Password { get; set; }
@@ -79,9 +80,30 @@ namespace ExamSys.Database.dbEntities
         }
     }
 
+    // Validation
+    public class UniqueUserName : ValidationAttribute
+    {
+        public ExamDB db = new ExamDB();
+        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+        {
+            try
+            {
+                User user = db.User.Where(m => m.UserName == value).FirstOrDefault();
+                if (user != null)
+                {
+                    return new ValidationResult("Error | Already exists");
+                }
+                return ValidationResult.Success;
+            }
+            catch (Exception ex)
+            {
+                return new ValidationResult(ex.Message);
+            }
+        }
+    }
     public class UniqueCNIC : ValidationAttribute
     {
-        //public ExamDB db = new ExamDB();
+        public ExamDB db = new ExamDB();
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             try

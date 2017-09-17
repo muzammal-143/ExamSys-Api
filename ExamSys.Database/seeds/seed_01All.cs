@@ -84,7 +84,7 @@ namespace ExamSys.Database.Seeds
 
             User user = new User()
             {
-                id = 1,
+                Id = 1,
                 UserName = "System",
                 Password = "ABCD1234",
                 FirstName = "System",
@@ -97,20 +97,6 @@ namespace ExamSys.Database.Seeds
             };
             seed_User.seed(db);
 
-            
-
-            seed_DayTiming.seed(db);
-            seed_Degrees.seed(db);
-            seed_Course.seed(db);
-            seed_Departments.seed(db);
-            seed_Designations.seed(db);
-            
-            seed_Grades.seed(db);
-            seed_Result_Types.seed(db);
-            
-            seed_Students.seed(db);
-
-            
             
         }
     }
