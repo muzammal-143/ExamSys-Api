@@ -23,7 +23,7 @@ namespace ExamSys.Database.dbEntities
         public bool Active { get; set; }
 
 
-
+        
         public User()
         {
             Active = true;
@@ -41,6 +41,7 @@ namespace ExamSys.Database.dbEntities
     {
         public int Id { get; set; }
 
+        // Relations
         public Role Role { get; set; }
 
         public User User { get; set; }
