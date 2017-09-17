@@ -61,6 +61,7 @@ namespace ExamSys.Database.dbEntities
         public int id { get; set; }
         public DateTime expire_at { get; set; }
 
+        // Relations
         public Permission Permission { get; set; }
 
         public User User { get; set; }
