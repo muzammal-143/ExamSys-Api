@@ -9,12 +9,12 @@ namespace ExamSys.Database
 {
     public class Activity : Properties
     {
-        public string Description { get; set; }
-
+        
         public int Id { get; set; }
-
         [Key]
         public string Title { get; set; }
+        public string Description { get; set; }
+
         public Activity()
         {
             new Properties();
@@ -23,5 +23,7 @@ namespace ExamSys.Database
         {
             new Properties(user);
         }
+
+
     }
 }

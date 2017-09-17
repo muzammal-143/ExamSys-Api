@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace ExamSys.Database.dbEntities
 {
-    public class DayTiming : Properties
+    public class DayTime : Properties
     {
         public int id { get; set; }
         [Key]
         public string Title { get; set; }
         public string Description { get; set; }
 
-        public DayTiming()
+        public DayTime()
         {
             new Properties();
         }
-        public DayTiming(User user)
+        public DayTime(User user)
         {
             new Properties(user);
         }

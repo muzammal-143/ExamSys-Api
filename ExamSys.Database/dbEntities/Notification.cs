@@ -11,15 +11,12 @@ namespace ExamSys.Database
     {
         [Key]
         public int Id { get; set; }
-
-        public string Table { get; set; }
-
-        public int TableId { get; set; }
-
         public string Title { get; set; }
-
         public string Description { get; set; }
+        public string Table { get; set; }
+        public int TableId { get; set; }
         public bool Active { get; set; }
+
         public Notification()
         {
             new Properties();

@@ -14,15 +14,15 @@ namespace ExamSys.Database.Seeds
         public static void seed(ExamDB db)
         {
             
-            IList<DayTiming> DayTiming = new List<DayTiming>()
+            IList<DayTime> DayTiming = new List<DayTime>()
             {
-                new DayTiming()
+                new DayTime()
                 {
                     id = 1,
                     Title = "Morning",
                     Description = "Morning",
                 },
-                new DayTiming()
+                new DayTime()
                 {
                     id = 2,
                     Title = "Evening",

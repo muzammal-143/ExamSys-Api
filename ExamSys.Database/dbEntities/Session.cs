@@ -29,17 +29,13 @@ namespace ExamSys.Database.dbEntities
     public class SessionDegree : Properties
     {
         public int id { get; set; }
-        
-        
-        
         public bool Active { get; set; }
-
         // Relatins
-
-        public DayTiming DayTiming{ get; set; }
-
-        public Session Session{ get; set; }
-
+        [Key]
+        public Session Session { get; set; }
+        [Key]
+        public DayTime DayTiming{ get; set; }
+        [Key]
         public Degree Degree{ get; set; }
 
         public SessionDegree()
@@ -58,19 +54,13 @@ namespace ExamSys.Database.dbEntities
     {
 
         public int id { get; set; }
+        public int CH { get; set; }
         public int Semester { get; set; }
 
         //Relations
         [Key]
-        public DayTiming DayTiming { get; set; }
-        [Key]
-
-        public int CH { get; set; }
-
-        
-
+        public DayTime DayTiming { get; set; }
         public Course Course{ get; set; }
-
         public Faculty Fachlty{ get; set; }
 
         public SessionDegree SessionDegree{ get; set; }
@@ -91,9 +81,8 @@ namespace ExamSys.Database.dbEntities
     public class SessionDepartment : Properties
     {
         public int Id { get; set; }
-
+        [Key]
         public Session Session{ get; set; }
-
         public Department Department{ get; set; }
     
         public SessionDepartment()
@@ -109,12 +98,12 @@ namespace ExamSys.Database.dbEntities
     public class SessionDepartmentDegree : Properties
     {
         public int Id { get; set; }
-
+        [Key]
+        public SessionDepartment SessionDepartment { get; set; }
+        [Key]
         public Degree Degree{ get; set; }
-
-        public SessionDepartment SessionDepartment{ get; set; }
-
-        public DayTiming DayTiming{ get; set; }
+        
+        public DayTime DayTiming{ get; set; }
         public SessionDepartmentDegree()
         {
             new Properties();

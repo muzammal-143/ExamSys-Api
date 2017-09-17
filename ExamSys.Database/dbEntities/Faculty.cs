@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,13 +9,9 @@ namespace ExamSys.Database.dbEntities
 {
     public class Faculty : Properties
     {
-
+        [Key]
         public int Id { get; set; }
-
-        public FacultyCourse FacultyCourses { get; set; }
-
         public User User { get; set; }
-
         public bool Active { get; set; }
 
         public Faculty()
@@ -38,10 +35,9 @@ namespace ExamSys.Database.dbEntities
         public Department Department { get; set; }
         public SessionPart SessionPart { get; set; }
         public int SessionPartValue { get; set; }
-
+        public bool Resit { get; set; }
         public Course Course { get; set; }
         
-
         public FacultyCourse()
         {
             new Properties();
@@ -51,4 +47,5 @@ namespace ExamSys.Database.dbEntities
             new Properties(user);
         }
     }
+
 }

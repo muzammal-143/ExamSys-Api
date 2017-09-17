@@ -14,9 +14,9 @@ namespace ExamSys.Database.Seeds
         {
             
 
-            IList<Grades> Grades = new List<Grades>()
+            IList<Grade> Grades = new List<Grade>()
             {
-                new Grades()
+                new Grade()
                 {
                     id = 1,
                     Lower_Range = 0,
@@ -24,7 +24,7 @@ namespace ExamSys.Database.Seeds
                     Points = 0,
                     Grade = "F",
                 },
-                new Grades()
+                new Grade()
                 {
                     id = 2,
                     Lower_Range = 50,
@@ -32,7 +32,7 @@ namespace ExamSys.Database.Seeds
                     Points = 1.0,
                     Grade = "D"
                 },
-                new Grades()
+                new Grade()
                 {
                     id = 3,
                     Lower_Range = 53,
@@ -40,7 +40,7 @@ namespace ExamSys.Database.Seeds
                     Points = 1.33,
                     Grade = "D+"
                 },
-                new Grades()
+                new Grade()
                 {
                     id = 4,
                     Lower_Range = 57,
@@ -48,7 +48,7 @@ namespace ExamSys.Database.Seeds
                     Points = 1.66,
                     Grade = "C-"
                 },
-                new Grades()
+                new Grade()
                 {
                     id = 5,
                     Lower_Range = 60,
@@ -56,7 +56,7 @@ namespace ExamSys.Database.Seeds
                     Points = 2.0,
                     Grade = "C"
                 },
-                new Grades()
+                new Grade()
                 {
                     id = 6,
                     Lower_Range = 63,
@@ -64,7 +64,7 @@ namespace ExamSys.Database.Seeds
                     Points = 2.33,
                     Grade = "C+"
                 },
-                new Grades()
+                new Grade()
                 {
                     id = 7,
                     Lower_Range = 67,
@@ -72,7 +72,7 @@ namespace ExamSys.Database.Seeds
                     Points = 2.66,
                     Grade = "B-"
                 },
-                new Grades()
+                new Grade()
                 {
                     id = 8,
                     Lower_Range = 70,
@@ -80,7 +80,7 @@ namespace ExamSys.Database.Seeds
                     Points = 3.00,
                     Grade = "B"
                 },
-                new Grades()
+                new Grade()
                 {
                     id = 9,
                     Lower_Range = 75,
@@ -88,14 +88,14 @@ namespace ExamSys.Database.Seeds
                     Points = 3.33,
                     Grade = "B+"
                 },
-                new Grades()
+                new Grade()
                 {
                     id = 10,
                     Lower_Range = 80,
                     Upper_Range = 84,
                     Points = 3.66,
                     Grade = "A"
-                },new Grades()
+                },new Grade()
                 {
                     id = 11,
                     Lower_Range = 85,

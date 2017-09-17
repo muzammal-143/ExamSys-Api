@@ -14,8 +14,9 @@ namespace ExamSys.Database.dbEntities
         [Key]
         public string Title { get; set; }
         public string Description { get; set; }
+        //Relations
+        public Activity Activity { get; set; }
 
-        public ExamSys.Database.Activity Activity { get; set; }
         public Permission()
         {
             new Properties();

@@ -7,54 +7,55 @@ using System.Threading.Tasks;
 
 namespace ExamSys.Database.dbEntities
 {
-    public class TaskStatus : Properties
+
+    public class TASK : Properties
+    {
+        public int id { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public bool Active { get; set; }
+
+        public TASKStatus TaskStatus { get; set; }
+
+        public TASK()
+        {
+            Active = true;
+            new Properties();
+        }
+        public TASK(User user)
+        {
+            Active = true;
+            new Properties(user);
+        }
+    }
+
+    public class TASKStatus : Properties
     {
         public int Id { get; set; }
         [Key]
         public string Title { get; set; }
         public string Description { get; set; }
-        
-        public TaskStatus()
+
+        public TASKStatus()
         {
             new Properties();
         }
-        public TaskStatus(User user)
+        public TASKStatus(User user)
         {
             new Properties(user);
         }
     }
-
-    public class Task : Properties
-    {
-        public int id { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public bool       Active { get; set; }
-
-        public TaskStatus TaskStatus { get; set; }
-
-        public Task()
-        {
-            Active = true;
-            new Properties();
-        }
-        public Task(User user)
-        {
-            Active = true;
-            new Properties(user);
-        }
-    }
-
+    
     public class TaskAssign : Properties
     {
         public int id { get; set; }
         [Key]
-        public Task Task { get; set; }
+        public TASK Task { get; set; }
         [Key]
         public User User { get; set; }
-        public TaskStatus Status { get; set; }
+        public TASKStatus Status { get; set; }
         public bool Active { get; set; }
-        
+
         public TaskAssign()
         {
             new Properties();
@@ -64,6 +65,5 @@ namespace ExamSys.Database.dbEntities
             new Properties(user);
         }
     }
-
 
 }

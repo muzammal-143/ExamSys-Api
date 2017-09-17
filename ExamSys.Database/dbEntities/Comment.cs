@@ -14,7 +14,7 @@ namespace ExamSys.Database.dbEntities
         [Key]
         public int Id { get; set; }
         public string Title { get; set; }
-        public string Message { get; set; }
+        public string Description { get; set; }
         public string Table { get; set; }
         public int TableId { get; set; }
 
@@ -27,21 +27,5 @@ namespace ExamSys.Database.dbEntities
             new Properties(user);
         }
     }
-    public class CommentAssign
-    {
-        public int id { get; set; }
-        [Key]
-        public User User { get; set; }
-        public bool Active { get; set; }
 
-        public Comment Comment{ get; set; }
-        public CommentAssign()
-        {
-            new Properties();
-        }
-        public CommentAssign(User user)
-        {
-            new Properties(user);
-        }
-    }
 }

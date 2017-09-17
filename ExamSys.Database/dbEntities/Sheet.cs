@@ -8,35 +8,29 @@ using System.Threading.Tasks;
 namespace ExamSys.Database.dbEntities
 {
 
-
     public class Sheet : Properties
     {
         public int Id { get; set; }
-
         public string Title { get; set; }
         public string Description { get; set; }
-        public double Total { get; set; }
 
-        //Relations
+        public double Total { get; set; }
+        public Session Session { get; set; }
+        public Degree Degree { get; set; }
+        public DayTime DayTiming { get; set; }
+        public StudentCourse StudentCourse { get; set; }
+        public ResultType ResultType { get; set; }
+        public Faculty Fachlty { get; set; }
+        public SessionPart SessionPart { get; set; }
+        public int SessionPartValue { get; set; }
+        public bool Resit { get; set; }
 
         public bool Save { get; set; }
         public bool EditAble { get; set; }
         public bool Submited { get; set; }
-        public bool approved { get; set; } // Summer or Semester // if summer then StateAct will be year else Semester#
+        public bool approved { get; set; }
 
-        public ResultType ResultType { get; set; }
-        public Faculty Fachlty { get; set; }
-        public Session Session { get; set; }
-        public Degree Degree { get; set; }
-        public DayTiming DayTiming { get; set; }
-
-        public bool Resit { get; set; }
-
-        public StudentCourse StudentCourse { get; set; }
-
-        public SessionPart SessionPart { get; set; }
-
-        public int SessionPartValue { get; set; }
+       
 
         public Sheet()
         {
@@ -59,12 +53,9 @@ namespace ExamSys.Database.dbEntities
     {
         public int id { get; set; }
         public double Obtain { get; set; }
-
         // Relations
-        public Sheet Sheet { get; set; }
-
         public Student Student { get; set; }
-
+        public Sheet Sheet { get; set; }
         public SheetMarks()
         {
             new Properties();
@@ -79,7 +70,7 @@ namespace ExamSys.Database.dbEntities
         public int id { get; set; }
         [Key]
         public User User { get; set; }
-
+        [Key]
         public Sheet Sheet { get; set; }
     
         public SheetApprove()

@@ -10,22 +10,93 @@ namespace ExamSys.Database
 {
     public class ExamDB : DbContext
     {
-        
-        public DbSet<Comment>                   Comment                 { get; set; }
-        public DbSet<Course>                    Course                  { get; set; }
-        public DbSet<DayTiming>                 DayTiming               { get; set; }
-        public DbSet<Degree>                    Degree                  { get; set; }
-        public DbSet<Department>                Department              { get; set; }
-        public DbSet<Role>                      Role                    { get; set; }
-        public DbSet<Grades>                    Grade                   { get; set; }
-        public DbSet<History>                   History                 { get; set; }
-        public DbSet<ResultType>                ResultType              { get; set; }
-        public DbSet<Result>                    Result                  { get; set; }
-        public DbSet<Result>                    Semester_Result         { get; set; }
-        public DbSet<SessionCourse>             Session_Course          { get; set; }
-        public DbSet<Status>                    Status                  { get; set; }
-        public DbSet<Student>                   Student                 { get; set; }
-        public DbSet<Task>                      Task                    { get; set; }
-        public DbSet<User>                      User                    { get; set; }
+
+        //Activity
+        public DbSet<Activity> Activity { get; set; }
+
+        //Comment
+        public DbSet<Comment> Comment { get; set; }
+
+        //Course
+        public DbSet<Course> Course { get; set; }
+
+        //DayTime
+        public DbSet<DayTime> DayTime { get; set; }
+
+        //Degree
+        public DbSet<DegreeLevel> DegreeLevel { get; set; }
+        public DbSet<Degree> Degree { get; set; }
+
+        //Department
+        public DbSet<Department> Department { get; set; }
+
+        //Faculty
+        public DbSet<Faculty> Faculty { get; set; }
+        public DbSet<FacultyCourse> FacultyCourse { get; set; }
+
+        //File
+        public DbSet<File> File { get; set; }
+
+        //Grade
+        public DbSet<GradeRule> GradeRule { get; set; }
+        public DbSet<Grade> Grade { get; set; }
+
+        //History
+        public DbSet<History> History { get; set; }
+
+        //Invoice
+        public DbSet<InvoiceType> InvoiceType { get; set; }
+        public DbSet<Invoice> Invoice { get; set; }
+
+        //Notification
+        public DbSet<Notification> Notification { get; set; }
+
+        //Permission
+        public DbSet<Permission> Permission { get; set; }
+
+        //Post
+        public DbSet<Post> Post { get; set; }
+
+        //Result
+        public DbSet<Result> Result { get; set; }
+
+        //ResultType
+        public DbSet<ResultType> ResultType { get; set; }
+
+        //Role
+        public DbSet<Role> Role { get; set; }
+        public DbSet<RolePermission> RolePermission { get; set; }
+
+        //Session
+        public DbSet<Session> Session { get; set; }
+        public DbSet<SessionDegree> SessionDegree { get; set; }
+        public DbSet<SessionDegreeCourse> SessionDegreeCourse { get; set; }
+        public DbSet<SessionDepartment> SessionDepartment { get; set; }
+        public DbSet<SessionDepartmentDegree> SessionDepartmentDegree { get; set; }
+
+        //Sheet
+        public DbSet<Sheet> Sheet { get; set; }
+        public DbSet<SheetMarks> SheetMarks { get; set; }
+        public DbSet<SheetApprove> SheetApprove { get; set; }
+
+        //Student
+        public DbSet<Student> Student { get; set; }
+        public DbSet<Registration> Registration { get; set; }
+        public DbSet<StudentCourse> StudentCourse { get; set; }
+        public DbSet<StudentDegree> StudentDegree { get; set; }
+        public DbSet<StudentSession> StudentSession { get; set; }
+        public DbSet<StudentAddCourse> StudentAddCourse { get; set; }
+        public DbSet<StudentResit> StudentResit { get; set; }
+
+        //TASK
+        public DbSet<TASK> TASK { get; set; }
+        public DbSet<TASKStatus> TaskStatus { get; set; }
+        public DbSet<TaskAssign> TaskAssign { get; set; }
+
+        //User
+        public DbSet<User> User { get; set; }
+        public DbSet<UserRole> UserRole { get; set; }
+        public DbSet<UserPermission> UserPermission { get; set; }
+
     }
 }

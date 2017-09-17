@@ -10,10 +10,10 @@ namespace ExamSys.Database.dbEntities
     public class GradeRule : Properties
     {
         public int Id { get; set; }
+        [Key]
         public string Title { get; set; }
         public string Description { get; set; }
 
-        public Grades Grades { get; set; }
     
         public GradeRule()
         {
@@ -24,7 +24,7 @@ namespace ExamSys.Database.dbEntities
             new Properties(user);
         }
     }
-    public class Grades : Properties
+    public class Grade : Properties
     {
         public int      id          { get; set; }
         public double   Lower_Range { get; set; }
@@ -33,14 +33,16 @@ namespace ExamSys.Database.dbEntities
         public string Grade { get; set; }
 
         // Relation
-    
-        public Grades()
+        public GradeRule GradeRule { get; set; }
+
+        public Grade()
         {
             new Properties();
         }
-        public Grades(User user)
+        public Grade(User user)
         {
             new Properties(user);
         }
+
     }
 }

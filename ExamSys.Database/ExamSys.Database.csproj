@@ -87,7 +87,7 @@
     <Compile Include="dbEntities\Activity.cs" />
     <Compile Include="dbEntities\Comment.cs" />
     <Compile Include="dbEntities\Course.cs" />
-    <Compile Include="dbEntities\DayTiming.cs" />
+    <Compile Include="dbEntities\DayTime.cs" />
     <Compile Include="dbEntities\Degree.cs" />
     <Compile Include="dbEntities\Department.cs" />
     <Compile Include="dbEntities\Faculty.cs" />
@@ -99,34 +99,43 @@
     <Compile Include="dbEntities\Properties.cs" />
     <Compile Include="dbEntities\ResultType.cs" />
     <Compile Include="dbEntities\Role.cs" />
-    <Compile Include="dbEntities\Grades.cs" />
+    <Compile Include="dbEntities\Grade.cs" />
     <Compile Include="dbEntities\History.cs" />
     <Compile Include="dbEntities\Result.cs" />
     <Compile Include="dbEntities\Session.cs" />
     <Compile Include="dbEntities\Sheet.cs" />
     <Compile Include="dbEntities\Student.cs" />
-    <Compile Include="dbEntities\Task.cs" />
+    <Compile Include="dbEntities\TASK.cs" />
     <Compile Include="dbEntities\User.cs" />
     <Compile Include="ExamDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="seeds\seed_All.cs" />
+    <Compile Include="seeds\seed_Role.cs" />
+    <Compile Include="seeds\seed_Activity.cs" />
+    <Compile Include="seeds\seed_01All.cs" />
+    <Compile Include="seeds\seed_Comment.cs" />
     <Compile Include="seeds\seed_Course.cs" />
-    <Compile Include="seeds\seed_DayTiming.cs" />
-    <Compile Include="seeds\seed_Degrees.cs" />
-    <Compile Include="seeds\seed_Departments.cs" />
-    <Compile Include="seeds\seed_Designations.cs" />
-    <Compile Include="seeds\seed_Faculties.cs" />
-    <Compile Include="seeds\seed_Grades.cs" />
-    <Compile Include="seeds\seed_Result_Types.cs" />
-    <Compile Include="seeds\seed_Semester_Details_Results.cs" />
-    <Compile Include="seeds\seed_Session_Courses.cs" />
-    <Compile Include="seeds\seed_Statuses.cs" />
-    <Compile Include="seeds\seed_Students.cs" />
+    <Compile Include="seeds\seed_DayTime.cs" />
+    <Compile Include="seeds\seed_Degree.cs" />
+    <Compile Include="seeds\seed_Department.cs" />
+    <Compile Include="seeds\seed_Faculty.cs" />
+    <Compile Include="seeds\seed_File.cs" />
+    <Compile Include="seeds\seed_Grade.cs" />
+    <Compile Include="seeds\seed_History.cs" />
+    <Compile Include="seeds\seed_Invoice.cs" />
+    <Compile Include="seeds\seed_Notification.cs" />
+    <Compile Include="seeds\seed_Permission.cs" />
+    <Compile Include="seeds\seed_Post.cs" />
+    <Compile Include="seeds\seed_Result.cs" />
+    <Compile Include="seeds\seed_ResultType.cs" />
+    <Compile Include="seeds\seed_Session.cs" />
+    <Compile Include="seeds\seed_Sheet.cs" />
+    <Compile Include="seeds\seed_Student.cs" />
+    <Compile Include="seeds\seed_TASK.cs" />
     <Compile Include="seeds\seed_User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="dbEntities\ClassDiagram.cd" />
+    <None Include="dbEntities\01-ClassDiagram.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

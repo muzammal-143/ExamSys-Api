@@ -9,6 +9,7 @@ namespace ExamSys.Database.dbEntities
 {
     public class History : Properties
     {
+        [Key]
         public int id { get; set; }
 
         [Required(ErrorMessage="Title is required")]
@@ -30,5 +31,6 @@ namespace ExamSys.Database.dbEntities
         {
             new Properties(user);
         }
+
     }
 }

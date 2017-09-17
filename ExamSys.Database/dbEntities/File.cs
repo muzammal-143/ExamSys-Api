@@ -10,14 +10,13 @@ namespace ExamSys.Database.dbEntities
 
     public class File : Properties
     {
+        [Key]
         public int Id { get; set; }
         public string Title { get; set; }
         public string Name { get; set; }
         public int Table { get; set; }
         public int TableId { get; set; }
 
-        
-    
         public File()
         {
             new Properties();
