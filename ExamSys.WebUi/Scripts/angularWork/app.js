@@ -6,5 +6,6 @@
  */
 
 (function () {
-    angular.module('Login');
+    //angular.module('Role');
+    var app = angular.module('Role', []);
 })();

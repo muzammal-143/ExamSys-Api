@@ -1,7 +1,7 @@
 
 
 function getRoles($scope, $http) {
-
+    $scope.x = "Volvo";
     $http({
         method: 'GET',
         url: '/Role/all'
@@ -13,13 +13,10 @@ function getRoles($scope, $http) {
 
 }
 
-app.controller('myCtrl', function ($scope) {
-    $scope.carname = "Volvo";
-});
 
 
 
 
-angular.module('alef')
-    .controller('getRoles', getRoles)
-    .controller('myCtrl', myCtrl)
+
+angular.module('Role')
+    .controller('getRoles', getRoles);

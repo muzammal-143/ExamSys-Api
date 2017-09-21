@@ -69,18 +69,26 @@
     </tbody>
 </table>
 
-<div ng-app="myApp" ng-controller="myCtrl">
-
-    <h1>{{carname}}</h1>
-
+<div ng-app="Role" ng-controller="index">
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat ="tr in data">
+                <td>{{tr.Title}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
+
 <script>
-var app = angular.module('myApp', []);
-
-
+    var app = angular.module('Role', []);
 </script>
-<script src="~/Scripts/angularWork/controllers.js"></script>
+<script src="~/Scripts/angularWork/Controllers/Role_Controller.js"></script>
 
 
 

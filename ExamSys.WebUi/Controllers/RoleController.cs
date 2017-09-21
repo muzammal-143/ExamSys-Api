@@ -6,6 +6,7 @@ using System.Dynamic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 
 namespace ExamSys.WebUi.Controllers
 {
@@ -26,7 +27,7 @@ namespace ExamSys.WebUi.Controllers
             dynamic returnData = new ExpandoObject();
             try
             {
-                returnData.status = "sucess";
+                returnData.status = "success";
                 returnData.data = db.Role.Where(m => m.isDeleted == false).ToList();
             }
             catch (Exception ex)
@@ -34,7 +35,12 @@ namespace ExamSys.WebUi.Controllers
                 returnData.status = "error";
                 returnData.data = ex.Message.ToString();
             }
-            return Json(returnData, JsonRequestBehavior.AllowGet);
+
+            var jsn = Newtonsoft.Json.JsonConvert.SerializeObject(returnData);
+            var json = new JavaScriptSerializer().Deserialize<object>(jsn);
+            //return json;
+            return Json(json, JsonRequestBehavior.AllowGet);
+
         }
 
         /*
