@@ -1,4 +1,5 @@
 ﻿using ExamSys.Database;
+using ExamSys.WebUi.Models;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace ExamSys.WebUi.Controllers
     {
         // GET: Role
         private ExamDB db = new ExamDB();
-
+        public Tools Tool = new Tools();
         [HttpGet]
         public ActionResult Index()
         {
@@ -28,7 +29,35 @@ namespace ExamSys.WebUi.Controllers
             try
             {
                 returnData.status = "success";
+                returnData.message = "Find some data";
                 returnData.data = db.Role.Where(m => m.isDeleted == false).ToList();
+            }
+            catch (Exception ex)
+            {
+                returnData.status = "error";
+                returnData.message = ex.Message.ToString();
+                returnData.data = "";
+            }
+
+            var SerializeJson = Newtonsoft.Json.JsonConvert.SerializeObject(returnData);
+            var DeserializeJson = new JavaScriptSerializer().Deserialize<object>(SerializeJson);
+
+            return Json(DeserializeJson, JsonRequestBehavior.AllowGet);
+        }
+
+        
+        [HttpPost]
+        public JsonResult add(FormCollection collection)
+        {
+            // Get Post Params Here
+            
+            dynamic returnData = new ExpandoObject();
+            try
+            {
+                string var1 = collection["var1"];
+
+                returnData.status = "success";
+                returnData.data = "Inserted successfully";
             }
             catch (Exception ex)
             {
@@ -36,20 +65,12 @@ namespace ExamSys.WebUi.Controllers
                 returnData.data = ex.Message.ToString();
             }
 
-            var jsn = Newtonsoft.Json.JsonConvert.SerializeObject(returnData);
-            var json = new JavaScriptSerializer().Deserialize<object>(jsn);
-            //return json;
-            return Json(json, JsonRequestBehavior.AllowGet);
+            var SerializeJson = Newtonsoft.Json.JsonConvert.SerializeObject(returnData);
+            var DeserializeJson = new JavaScriptSerializer().Deserialize<object>(SerializeJson);
 
+            return Json(DeserializeJson, JsonRequestBehavior.AllowGet);
         }
-
         /*
-        [HttpPost]
-        public ActionResult SubmitAction(FormCollection collection)
-        {
-            // Get Post Params Here
-            string var1 = collection["var1"];
-        }
         [HttpPost]
         public ActionResult SubmitAction()
         {

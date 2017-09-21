@@ -69,19 +69,29 @@
     </tbody>
 </table>
 
-<div ng-app="Role" ng-controller="index">
-    <table>
-        <thead>
-            <tr>
-                <th>id</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat ="tr in data">
-                <td>{{tr.Title}}</td>
-            </tr>
-        </tbody>
-    </table>
+<div ng-app="Role" >
+    <div ng-controller="index">
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="tr in data">
+                    <td>{{tr.Title}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div ng-controller="add">
+        <form ng-submit="submit()">
+            Enter text and hit enter:
+            <input type="text" ng-model="Role.Title" name="text" />
+            <input type="submit" id="submit" value="Submit" />
+
+        </form>
+    </div>
 </div>
 
 

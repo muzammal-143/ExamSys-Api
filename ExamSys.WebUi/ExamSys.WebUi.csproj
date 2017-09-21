@@ -208,6 +208,7 @@
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Tools.cs" />
     <Compile Include="MyIdentity.cs" />
     <Compile Include="MyMembershipProvider.cs" />
     <Compile Include="MyPrincipal.cs" />
