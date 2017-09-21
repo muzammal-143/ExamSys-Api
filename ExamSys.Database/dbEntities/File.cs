@@ -17,13 +17,13 @@ namespace ExamSys.Database.dbEntities
         public int Table { get; set; }
         public int TableId { get; set; }
 
-        public File()
+        
+        public File(USER user)
         {
-            new Properties();
-        }
-        public File(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
 }

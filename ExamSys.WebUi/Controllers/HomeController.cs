@@ -1,4 +1,6 @@
 ﻿using ExamSys.Database;
+using ExamSys.Database.dbEntities;
+using ExamSys.Database.Seeds;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +15,18 @@ namespace ExamSys.WebUi.Controllers
         public ActionResult Index()
         {
             
-            var s = db.Comment.ToList();
+            //var s = db.Comment.ToList();
             ViewBag.Title = "Home Page";
+
+            return View();
+        }
+
+        public ActionResult Seed()
+        {
+            
+            
+
+            ViewBag.Title = "Seed All";
 
             return View();
         }

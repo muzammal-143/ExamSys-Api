@@ -10,22 +10,23 @@ namespace ExamSys.Database.dbEntities
 {
     public class Department : Properties
     {
+        [Index("Id", IsUnique = true)]
         public int id { get; set; }
         [Key]
         public string   Title       { get; set; }
         public string   Description        { get; set; }
         public string   Color           { get; set; }
 
-        public Department()
+        
+        public Department(USER user)
         {
-            new Properties();
-        }
-        public Department(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
 
-
+    
 }
 

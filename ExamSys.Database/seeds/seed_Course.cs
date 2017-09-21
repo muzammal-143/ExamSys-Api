@@ -14,9 +14,10 @@ namespace ExamSys.Database.Seeds
         {
             
 
-            User user = db.User.Find(1);
+            USER user = db.User.Find(1);
             IList<Course> Courses = new List<Course>()
             {
+                /*
                 new Course{id=1,Code="CS201",CH=2,Name="Introduction to computers", created_by = user},
                 new Course{id=2,Code="CS202",CH=2,Name="Fundamentals of C Programming", created_by = user},
                 /*

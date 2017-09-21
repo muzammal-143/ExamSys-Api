@@ -17,13 +17,13 @@ namespace ExamSys.Database
         public int TableId { get; set; }
         public bool Active { get; set; }
 
-        public Notification()
+        
+        public Notification(USER user)
         {
-            new Properties();
-        }
-        public Notification(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
 }

@@ -13,13 +13,13 @@ namespace ExamSys.Database.dbEntities
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description  { get; set; }
-        public Post()
+        
+        public Post(USER user)
         {
-            new Properties();
-        }
-        public Post(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
 }

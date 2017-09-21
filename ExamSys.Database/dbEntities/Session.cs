@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,27 +10,26 @@ namespace ExamSys.Database.dbEntities
 {
     public class Session : Properties
     {
+        [Index("Id", IsUnique = true)]
         public int id { get; set; }
         [Key]
         public string Title { get; set; }
         public string Description { get; set; }
         public bool Active { get; set; }
 
-
-        public Session()
+        public Session(USER user)
         {
-            new Properties();
-        }
-        public Session(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
 
     public class SessionDegree : Properties
     {
+        [Index("Id", IsUnique = true)]
         public int id { get; set; }
-        public bool Active { get; set; }
         // Relatins
         [Key]
         public Session Session { get; set; }
@@ -38,15 +38,14 @@ namespace ExamSys.Database.dbEntities
         [Key]
         public Degree Degree{ get; set; }
 
-        public SessionDegree()
+        public bool Active { get; set; }
+        public SessionDegree(USER user)
         {
             Active = true;
-            new Properties();
-        }
-        public SessionDegree(User user)
-        {
-            Active = true;
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
 
@@ -67,13 +66,13 @@ namespace ExamSys.Database.dbEntities
 
         public ResultTypeRule ResultTypeRule{ get; set; }
 
-        public SessionDegreeCourse()
+        
+        public SessionDegreeCourse(USER user)
         {
-            new Properties();
-        }
-        public SessionDegreeCourse(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
 
     }
@@ -85,13 +84,13 @@ namespace ExamSys.Database.dbEntities
         public Session Session{ get; set; }
         public Department Department{ get; set; }
     
-        public SessionDepartment()
+        
+        public SessionDepartment(USER user)
         {
-            new Properties();
-        }
-        public SessionDepartment(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
 
@@ -104,13 +103,13 @@ namespace ExamSys.Database.dbEntities
         public Degree Degree{ get; set; }
         
         public DayTime DayTiming{ get; set; }
-        public SessionDepartmentDegree()
+        
+        public SessionDepartmentDegree(USER user)
         {
-            new Properties();
-        }
-        public SessionDepartmentDegree(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
         
     }

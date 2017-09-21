@@ -32,21 +32,17 @@ namespace ExamSys.Database.dbEntities
 
        
 
-        public Sheet()
+        
+        public Sheet(USER user)
         {
             Save = true;
             EditAble = true;
             Submited = false;
             approved = false;
-            new Properties();
-        }
-        public Sheet(User user)
-        {
-            Save = true;
-            EditAble = true;
-            Submited = false;
-            approved = false;
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
     public class SheetMarks : Properties
@@ -56,30 +52,30 @@ namespace ExamSys.Database.dbEntities
         // Relations
         public Student Student { get; set; }
         public Sheet Sheet { get; set; }
-        public SheetMarks()
+        
+        public SheetMarks(USER user)
         {
-            new Properties();
-        }
-        public SheetMarks(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
     public class SheetApprove : Properties
     {
         public int id { get; set; }
         [Key]
-        public User User { get; set; }
+        public USER User { get; set; }
         [Key]
         public Sheet Sheet { get; set; }
     
-        public SheetApprove()
+        
+        public SheetApprove(USER user)
         {
-            new Properties();
-        }
-        public SheetApprove(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
 

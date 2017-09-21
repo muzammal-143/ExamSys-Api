@@ -24,4 +24,3 @@ D:\Projects\ExamSystemApi\ExamSys.Database\bin\Debug\Microsoft.Owin.Security.OAu
 D:\Projects\ExamSystemApi\ExamSys.Database\bin\Debug\Newtonsoft.Json.xml
 D:\Projects\ExamSystemApi\ExamSys.Database\obj\Debug\ExamSys.Database.dll
 D:\Projects\ExamSystemApi\ExamSys.Database\obj\Debug\ExamSys.Database.pdb
-D:\Projects\ExamSystemApi\ExamSys.Database\obj\Debug\ExamSys.Database.csprojResolveAssemblyReference.cache

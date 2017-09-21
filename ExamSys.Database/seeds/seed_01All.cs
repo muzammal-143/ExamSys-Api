@@ -14,8 +14,9 @@ namespace ExamSys.Database.Seeds
         public void start() 
         {
 
+            /*
             //Activity
-            db.Database.ExecuteSqlCommand("TRUNCATE TABLE Activitys");
+            db.Database.ExecuteSqlCommand("TRUNCATE TABLE Activities");
             //Comment
             db.Database.ExecuteSqlCommand("TRUNCATE TABLE Comments");
             //Course
@@ -28,7 +29,7 @@ namespace ExamSys.Database.Seeds
             //Department
             db.Database.ExecuteSqlCommand("TRUNCATE TABLE Departments");
             //Faculty
-            db.Database.ExecuteSqlCommand("TRUNCATE TABLE Facultys");
+            db.Database.ExecuteSqlCommand("TRUNCATE TABLE Faculties");
             db.Database.ExecuteSqlCommand("TRUNCATE TABLE FacultyCourses");
             //File
             db.Database.ExecuteSqlCommand("TRUNCATE TABLE Files");
@@ -36,7 +37,7 @@ namespace ExamSys.Database.Seeds
             db.Database.ExecuteSqlCommand("TRUNCATE TABLE Grades");
             db.Database.ExecuteSqlCommand("TRUNCATE TABLE GradeRules");
             //History
-            db.Database.ExecuteSqlCommand("TRUNCATE TABLE Historys");
+            db.Database.ExecuteSqlCommand("TRUNCATE TABLE Histories");
             //Invoice
             db.Database.ExecuteSqlCommand("TRUNCATE TABLE Invoices");
             db.Database.ExecuteSqlCommand("TRUNCATE TABLE InvoiceTypes");
@@ -76,26 +77,15 @@ namespace ExamSys.Database.Seeds
             db.Database.ExecuteSqlCommand("TRUNCATE TABLE TaskStatuss");
             db.Database.ExecuteSqlCommand("TRUNCATE TABLE TaskAssigns");
             //User
-            db.Database.ExecuteSqlCommand("TRUNCATE TABLE Users");
+            //db.Database.ExecuteSqlCommand("TRUNCATE TABLE Users");
             db.Database.ExecuteSqlCommand("TRUNCATE TABLE UserRoles");
             db.Database.ExecuteSqlCommand("TRUNCATE TABLE UserPermissions");
-
+            
+            
             db.SaveChanges();
-
-            User user = new User()
-            {
-                Id = 1,
-                UserName = "System",
-                Password = "ABCD1234",
-                FirstName = "System",
-                LastName = "Exam",
-                CNIC = "00000-0000000-0",
-                Email = "SU.ExamSystem@gmail.com",
-                Active = true,
-                Gender = Gender.MALE
-
-            };
-            seed_User.seed(db);
+            */
+            seed_DayTime.seed(db);
+            
 
             
         }

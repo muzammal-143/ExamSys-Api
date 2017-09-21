@@ -108,7 +108,7 @@
     <Compile Include="dbEntities\Sheet.cs" />
     <Compile Include="dbEntities\Student.cs" />
     <Compile Include="dbEntities\TASK.cs" />
-    <Compile Include="dbEntities\User.cs" />
+    <Compile Include="dbEntities\USER.cs" />
     <Compile Include="ExamDB.cs" />
     <Compile Include="interfaces\iActivity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -134,7 +134,7 @@
     <Compile Include="seeds\seed_Sheet.cs" />
     <Compile Include="seeds\seed_Student.cs" />
     <Compile Include="seeds\seed_TASK.cs" />
-    <Compile Include="seeds\seed_User.cs" />
+    <Compile Include="seeds\seed_USER.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

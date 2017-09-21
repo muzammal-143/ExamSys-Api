@@ -10,7 +10,7 @@ namespace ExamSys.Database.dbEntities
     public class Properties
     {
         public bool     isDeleted { get; set; }
-        public User created_by { get; set; }
+        public USER created_by { get; set; }
         // Timestamp
         [Display(Name = "Created at")]
         [Required(ErrorMessage="Created at DateTime is required.")]
@@ -19,20 +19,6 @@ namespace ExamSys.Database.dbEntities
         [Display(Name = "Edited at")]
         [Required(ErrorMessage = "Edited at DateTime is required.")]
         public DateTime edited_at { get; set; }
-
-        public Properties()
-        {
-            created_by = new ExamDB().User.Find(1); // System
-            isDeleted = false;
-            created_at = DateTime.Now;
-            edited_at = DateTime.Now;
-        }
-        public Properties(User user)
-        {
-            created_by = user;
-            isDeleted = false;
-            created_at = DateTime.Now;
-            edited_at = DateTime.Now;
-        }
+        
     }
 }

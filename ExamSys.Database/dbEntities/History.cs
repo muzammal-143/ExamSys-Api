@@ -23,13 +23,13 @@ namespace ExamSys.Database.dbEntities
         public string Table { get; set; }
         public int TableId { get; set; }
         
-        public History()
+        
+        public History(USER user)
         {
-            new Properties();
-        }
-        public History(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
 
     }

@@ -15,9 +15,7 @@ namespace ExamSys.Database.Seeds
 
             IList<Faculty> Faculties = new List<Faculty>()
             {
-                new Faculty()
-                {
-                },
+                
             };
             foreach (var item in Faculties)
                 context.Faculty.Add(item);

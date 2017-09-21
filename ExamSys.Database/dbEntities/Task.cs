@@ -17,15 +17,14 @@ namespace ExamSys.Database.dbEntities
 
         public TASKStatus TaskStatus { get; set; }
 
-        public TASK()
+        
+        public TASK(USER user)
         {
             Active = true;
-            new Properties();
-        }
-        public TASK(User user)
-        {
-            Active = true;
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
 
@@ -36,13 +35,13 @@ namespace ExamSys.Database.dbEntities
         public string Title { get; set; }
         public string Description { get; set; }
 
-        public TASKStatus()
+        
+        public TASKStatus(USER user)
         {
-            new Properties();
-        }
-        public TASKStatus(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
     
@@ -52,17 +51,17 @@ namespace ExamSys.Database.dbEntities
         [Key]
         public TASK Task { get; set; }
         [Key]
-        public User User { get; set; }
+        public USER User { get; set; }
         public TASKStatus Status { get; set; }
         public bool Active { get; set; }
 
-        public TaskAssign()
+        
+        public TaskAssign(USER user)
         {
-            new Properties();
-        }
-        public TaskAssign(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
 

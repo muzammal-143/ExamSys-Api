@@ -13,32 +13,33 @@ namespace ExamSys.Database.dbEntities
 
     public enum Student_Status
     {
-        ACTIVE,
-        COMPLETED,
-        FREEZE,
+        ACTIVE=1,
+        COMPLETED=2,
+        FREEZE=3,
     }
     public enum StudentDegree_Status
     {
-        ACTIVE,
-        PASS,
-        DROP,
+        ACTIVE=1,
+        PASS=2,
+        DROP=3,
     }
     public enum StudentSession_Status
     {
-        ACTIVE,
-        COMPLETED,
-        FREEZE,
+        ACTIVE=1,
+        COMPLETED=2,
+        FREEZE=3,
     }
     public enum StudentCourse_Status
     {
-        ACTIVE,
-        PASS,
-        DROP,
+        ACTIVE=1,
+        PASS=2,
+        DROP=3,
     }
 
 
     public class Student : Properties
     {
+        [Index("Id", IsUnique = true)]
         public int          id { get; set; }
         [Key]
         public string RollNo { get; set; }
@@ -48,28 +49,28 @@ namespace ExamSys.Database.dbEntities
         public Degree Degree{ get; set; }
         public Student_Status Status{ get; set; }
 
-        public Student()
+        
+        public Student(USER user)
         {
-            new Properties();
-        }
-        public Student(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
 
 
     }
     public class StudentCourse  : Properties
     {
+        [Index("Id", IsUnique = true)]
         public int Id { get; set; }
-        [Key]
-        public int Semester { get; set; }
         public int CH { get; set; }
-
+        public int Semester { get; set; }
+        [Key]
+        public Student Student { get; set; }
+        [Key]
         public Course Course{ get; set; }
-
-        public Student Student{ get; set; }
-
+        
         public ResultTypeRule ResultTypeRule{ get; set; }
 
         public Session Session{ get; set; }
@@ -77,17 +78,18 @@ namespace ExamSys.Database.dbEntities
         public Faculty Fachlty{ get; set; }
 
         public StudentCourse_Status StudentCourse_Status{ get; set; }
-        public StudentCourse()
+        
+        public StudentCourse(USER user)
         {
-            new Properties();
-        }
-        public StudentCourse(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
     public class StudentDegree : Properties
     {
+        [Index("Id", IsUnique = true)]
         public int Id{ get; set; }
 
         public Student Student{ get; set; }
@@ -96,17 +98,18 @@ namespace ExamSys.Database.dbEntities
         public DayTime DayTiming{ get; set; }
 
         public StudentDegree_Status Status{ get; set; }
-        public StudentDegree()
+        
+        public StudentDegree(USER user)
         {
-            new Properties();
-        }
-        public StudentDegree(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
     public class StudentSession : Properties
     {
+        [Index("Id", IsUnique = true)]
         public int Id { get; set; }
         public int Semester { get; set; }
 
@@ -117,34 +120,36 @@ namespace ExamSys.Database.dbEntities
         public Session Session{ get; set; }
         public StudentSession_Status Status { get; set; }
 
-        public StudentSession()
+        
+        public StudentSession(USER user)
         {
-            new Properties();
-        }
-        public StudentSession(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
     public class Registration : Properties
     {
+        [Index("Id", IsUnique = true)]
         public int id { get; set; }
         [Key]
         public string RegistrationNo { get; set; }
-        public User User{ get; set; }
+        public USER User{ get; set; }
         public Student Student{ get; set; }
         public bool Active{ get; set; }
-        public Registration()
+        
+        public Registration(USER user)
         {
-            new Properties();
-        }
-        public Registration(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
     public class StudentAddCourse : Properties
     {
+        [Index("Id", IsUnique = true)]
         public int id { get; set; }
         //Relations
         public StudentCourse StudentCourse{ get; set; }
@@ -152,18 +157,19 @@ namespace ExamSys.Database.dbEntities
         public int SessionPartValue { get; set; }
 
         
-        public StudentAddCourse()
+        
+        public StudentAddCourse(USER user)
         {
-            new Properties();
-        }
-        public StudentAddCourse(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
 
     }
     public class StudentResit : Properties
     {
+        [Index("Id", IsUnique = true)]
         public int id { get; set; }
 
         //Relations
@@ -172,13 +178,13 @@ namespace ExamSys.Database.dbEntities
         public int SessionPartValue{ get; set; }
         public ResultType ResultType{ get; set; }
 
-        public StudentResit()
+        
+        public StudentResit(USER user)
         {
-            new Properties();
-        }
-        public StudentResit(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
 

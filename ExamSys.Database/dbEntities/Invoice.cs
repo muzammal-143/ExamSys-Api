@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,25 +9,11 @@ using System.Threading.Tasks;
 namespace ExamSys.Database.dbEntities
 {
 
-    public class InvoiceType : Properties
-    {
-        public int Id { get; set; }
-        [Key]
-        public string Title { get; set; }
-        public string Description { get; set; }
-    
-        public InvoiceType()
-        {
-            new Properties();
-        }
-        public InvoiceType(User user)
-        {
-            new Properties(user);
-        }
-    }
+
 
     public class Invoice : Properties
     {
+        [Key]
         public int Id { get; set; }
         public double Rs { get; set; }
         public string Title { get; set; }
@@ -35,17 +22,34 @@ namespace ExamSys.Database.dbEntities
 
         public InvoiceType InvoiceType { get; set; }
         
-        public Invoice()
+        
+        public Invoice(USER user)
         {
             Valid = true;
-            new Properties();
-        }
-        public Invoice(User user)
-        {
-            Valid = true;
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
         
+    }
+
+    public class InvoiceType : Properties
+    {
+        [Index("Id", IsUnique = true)]
+        public int Id { get; set; }
+        [Key]
+        public string Title { get; set; }
+        public string Description { get; set; }
+
+
+        public InvoiceType(USER user)
+        {
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
+        }
     }
 
 

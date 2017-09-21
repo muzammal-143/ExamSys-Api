@@ -16,10 +16,7 @@ namespace ExamSys.Database.Seeds
 
             IList<ResultType> ResultTypes = new List<ResultType>()
             {
-                new ResultType()
-                {
-                    
-                },
+                
             };
 
             foreach (var item in ResultTypes)

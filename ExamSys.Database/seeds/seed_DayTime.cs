@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 
 namespace ExamSys.Database.Seeds
 {
-    public class seed_DayTiming
+    public class seed_DayTime
     {
         public static void seed(ExamDB db)
         {
             
-            IList<DayTime> DayTiming = new List<DayTime>()
+            IList<DayTime> DayTime = new List<DayTime>()
             {
+                /*
                 new DayTime()
                 {
                     id = 1,
@@ -28,8 +29,9 @@ namespace ExamSys.Database.Seeds
                     Title = "Evening",
                     Description = "Evening",
                 },
+                 */
             };
-            foreach (var item in DayTiming)
+            foreach (var item in DayTime)
                 db.DayTime.AddOrUpdate(item);
 
             db.SaveChanges();

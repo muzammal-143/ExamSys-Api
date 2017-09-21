@@ -10,19 +10,22 @@ namespace ExamSys.Database.dbEntities
 {
     public class DayTime : Properties
     {
+        [Index("Id", IsUnique = true)]
         public int id { get; set; }
         [Key]
         public string Title { get; set; }
         public string Description { get; set; }
 
-        public DayTime()
+        
+        public DayTime(USER user)
         {
-            new Properties();
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
-        public DayTime(User user)
-        {
-            new Properties(user);
-        }
+        
     }
+
 
 }

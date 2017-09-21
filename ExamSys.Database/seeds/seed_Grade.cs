@@ -16,6 +16,7 @@ namespace ExamSys.Database.Seeds
 
             IList<Grade> Grades = new List<Grade>()
             {
+                /*
                 new Grade()
                 {
                     Id = 1,
@@ -103,6 +104,7 @@ namespace ExamSys.Database.Seeds
                     Points = 4.0,
                     grade = "A+"
                 },
+                 */ 
             };
             foreach (var item in Grades)
                 context.Grade.Add(item);

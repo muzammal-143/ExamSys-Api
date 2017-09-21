@@ -16,10 +16,7 @@ namespace ExamSys.Database.Seeds
 
             IList<Department> Departments = new List<Department>()
             {
-                new Department()
-                {
-                   
-                },
+                
             };
             foreach (var item in Departments) db.Department.Add(item);
 

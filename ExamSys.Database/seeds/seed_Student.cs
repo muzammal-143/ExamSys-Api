@@ -16,10 +16,7 @@ namespace ExamSys.Database.Seeds
             
             
             context.Student.AddOrUpdate(
-                new Student()
-                {
-                    
-                }
+                
             );
 
             context.SaveChanges();

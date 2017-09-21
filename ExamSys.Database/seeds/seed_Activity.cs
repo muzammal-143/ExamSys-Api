@@ -13,11 +13,11 @@ namespace ExamSys.Database.seeds
         {
 
 
-            User user = db.User.Find(1);
+            USER user = db.User.Find(1);
             IList<Activity> Activities = new List<Activity>()
             {
                 // new Activity{Id=, Title = "", Description = ""},
-                new Activity{Id=1, Title = "Create User", Description = "For creating new user"},
+                //new Activity{Id=1, Title = "Create User", Description = "For creating new user"},
                 
                 
             

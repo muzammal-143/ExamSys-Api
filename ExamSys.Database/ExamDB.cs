@@ -94,7 +94,7 @@ namespace ExamSys.Database
         public DbSet<TaskAssign> TaskAssign { get; set; }
 
         //User
-        public DbSet<User> User { get; set; }
+        public DbSet<USER> User { get; set; }
         public DbSet<UserRole> UserRole { get; set; }
         public DbSet<UserPermission> UserPermission { get; set; }
 

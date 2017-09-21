@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ExamSys.Database.dbEntities
 {
-    public class Result
+    public class Result : Properties
     {
         [Key]
         public int id { get; set; }
@@ -24,13 +24,13 @@ namespace ExamSys.Database.dbEntities
         public int SessionPartValue{ get; set; }
         public bool Resit { get; set; }
 
-        public Result()
+        
+        public Result(USER user)
         {
-            new Properties();
-        }
-        public Result(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
 

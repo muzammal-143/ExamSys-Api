@@ -10,36 +10,42 @@ namespace ExamSys.Database.dbEntities
 {
     public class Role : Properties
     {
+        [Index("Id", IsUnique = true)]
         public int id { get; set; }
 
-        //[Index(IsUnique = true)]
+        [Key]
         public string Title { get; set; }
-
+        public string Description { get; set; }
 
         public Role()
         {
-            new Properties();
+            
         }
-        public Role(User user)
+        
+        public Role(USER user)
         {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
     public class RolePermission : Properties
     {
+
         public int id { get; set; }
-
+        [Key]
         public Role Role { get; set; }
-
+        [Key]
         public Permission Permission { get; set; }
     
-        public RolePermission()
+        
+        public RolePermission(USER user)
         {
-            new Properties();
-        }
-        public RolePermission(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
 }

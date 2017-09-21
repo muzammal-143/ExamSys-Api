@@ -11,20 +11,21 @@ namespace ExamSys.Database.dbEntities
     
     public class Comment : Properties
     {
-        [Key]
+        [Index("Id", IsUnique = true)]
         public int Id { get; set; }
+        [Key]
         public string Title { get; set; }
         public string Description { get; set; }
         public string Table { get; set; }
         public int TableId { get; set; }
 
-        public Comment()
+        
+        public Comment(USER user)
         {
-            new Properties();
-        }
-        public Comment(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
 

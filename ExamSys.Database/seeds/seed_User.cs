@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ExamSys.Database.seeds
 {
-    public class seed_User
+    public class seed_USER
     {
         public static void seed(ExamDB context)
         {

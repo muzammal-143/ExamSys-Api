@@ -15,6 +15,7 @@ namespace ExamSys.Database.Seeds
             
             IList<Degree> Degrees = new List<Degree>()
             {
+                /*
                 new Degree()
                 {
                     id = 1,
@@ -33,6 +34,7 @@ namespace ExamSys.Database.Seeds
                     Title = "Post graduate",
                     Description = "Post graduate"
                 },
+                 */
             };
             foreach (var item in Degrees)
                 db.Degree.Add(item);

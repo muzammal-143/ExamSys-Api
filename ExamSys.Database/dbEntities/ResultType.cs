@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,33 +10,35 @@ namespace ExamSys.Database.dbEntities
 {
     public class ResultType : Properties
     {
+        [Index("Id", IsUnique = true)]
         public int Id { get; set; }
         [Key]
         public string Title { get; set; }
         public string Description { get; set; }
-        public ResultType()
+        
+        public ResultType(USER user)
         {
-            new Properties();
-        }
-        public ResultType(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
 
     public class ResultTypeRule : Properties
     {
+        [Key]
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description  { get; set; }
         public double TotalMarks { get; set; }
-        public ResultTypeRule()
+        
+        public ResultTypeRule(USER user)
         {
-            new Properties();
-        }
-        public ResultTypeRule(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
 
@@ -46,13 +49,13 @@ namespace ExamSys.Database.dbEntities
         public ResultType ResultType{ get; set; }
 
         public ResultTypeRule ResultTypeRule{ get; set; }
-        public ResultTypeAndRule()
+        
+        public ResultTypeAndRule(USER user)
         {
-            new Properties();
-        }
-        public ResultTypeAndRule(User user)
-        {
-            new Properties(user);
+            created_by = user;
+            isDeleted = false;
+            created_at = DateTime.Now;
+            edited_at = DateTime.Now;
         }
     }
 }
